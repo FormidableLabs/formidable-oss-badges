@@ -40,11 +40,11 @@
   ],
   "author": "Kara Stubbs <kara.stubbs@formidable.com> (https://github.com/kiraarghy)",
   "bugs": {
-    "url": "https://github.com/kiraarghy/ProjectBadges/issues"
+    "url": "https://github.com/FormidableLabs/formidable-oss-badges/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/philpl/ProjectBadges.git"
+    "url": "git+https://github.com/FormidableLabs/formidable-oss-badges"
   },
   "engines": {
     "npm": ">= 2.0.0",
