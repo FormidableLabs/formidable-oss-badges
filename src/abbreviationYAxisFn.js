@@ -1,7 +1,9 @@
 const abbreviationYAxisFn = abb => {
-  const doesAbbrContainTail = RegExp(`[gjpqy]`).test(abb);
+  /*  For letters with descenders (part of a letter that extends below the font's baseline), 
+      we need more space below the letter to stop overlap with the rest of the SVG */
+  const doesAbbrContainDescender = RegExp(`[gjpqy]`).test(abb);
 
-  return doesAbbrContainTail ? "50%" : "52%";
+  return doesAbbrContainDescender ? "50%" : "52%";
 };
 
 export default abbreviationYAxisFn;

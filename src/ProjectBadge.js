@@ -5,27 +5,30 @@ import reducerFn from "./reducerFn";
 import { GlobalStyle, MiddleRing, InnerRing, Svg } from "./ProjectBadge.styles";
 
 const ProjectBadge = ({
-  color = "#FF00FF",
-  abbreviation = "De",
-  description = "Default Description",
-  number = 0,
-  className = ""
+  color = "#FFFFFF",
+  abbreviation,
+  description,
+  number,
+  className
 }) => {
-  const descriptionArr = description.split(" ").reduce(reducerFn, []);
+  const descriptionArr =
+    description && description.split(" ").reduce(reducerFn, []);
 
-  const descriptionText = descriptionArr.map((word, idx, array) => (
-    <text
-      x="39%"
-      y={`${array.length === 1 ? "66" : 65 + idx * 6}%`}
-      fontFamily="Work Sans Semi Bold"
-      fontSize={`${array.length === 1 ? "24" : "18"}`}
-      letterSpacing={1.8}
-      fill="#1D1E1F"
-      textAnchor="middle"
-    >
-      {word.toUpperCase()}
-    </text>
-  ));
+  const descriptionText =
+    descriptionArr &&
+    descriptionArr.map((word, idx, array) => (
+      <text
+        x="39%"
+        y={`${array.length === 1 ? "66" : 65 + idx * 6}%`}
+        fontFamily="Work Sans Semi Bold"
+        fontSize={`${array.length === 1 ? "24" : "18"}`}
+        letterSpacing={1.8}
+        fill="#1D1E1F"
+        textAnchor="middle"
+      >
+        {word.toUpperCase()}
+      </text>
+    ));
 
   const abbrYAxis = abbreviationYAxisFn(abbreviation);
 
