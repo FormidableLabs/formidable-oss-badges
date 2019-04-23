@@ -4,11 +4,11 @@ import reducerFn from "./reducerFn";
 import { GlobalStyle, MiddleRing, InnerRing, Svg } from "./ProjectBadge.styles";
 
 const ProjectBadge = ({
-  color,
-  abbreviation,
-  description,
-  number,
-  className
+  color = "#FF00FF",
+  abbreviation = "De",
+  description = "Default Description",
+  number = 0,
+  className = ""
 }) => {
   const descriptionArr = description.split(" ").reduce(reducerFn, []);
 
