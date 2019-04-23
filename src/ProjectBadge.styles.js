@@ -1,17 +1,17 @@
 import styled, { keyframes, createGlobalStyle } from "styled-components";
 
-import AlphavilleMedium from "../fonts/Alphaville Medium.woff";
-import AkkuratBold from "../fonts/Akkurat Bold.woff";
+import BaiJamjureeSemiBold from "../fonts/BaiJamjuree-SemiBold.woff";
+import WorkSansSemiBold from "../fonts/WorkSans-SemiBold.woff";
 
 export const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: "AlphaVille Medium";
-    src: url(${AlphavilleMedium});
+    font-family: "Bai Jamjuree Semi Bold";
+    src: url(${BaiJamjureeSemiBold});
   }
   
   @font-face {
-    font-family: "Akkurat Bold";
-    src: url(${AkkuratBold});
+    font-family: "Work Sans Semi Bold";
+    src: url(${WorkSansSemiBold});
   }
 `;
 
