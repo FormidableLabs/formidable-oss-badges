@@ -20,7 +20,7 @@ const ProjectBadge = ({
       fontSize={`${array.length === 1 ? "24" : "18"}`}
       letterSpacing={1.8}
       fill="#1D1E1F"
-      text-anchor="middle"
+      textAnchor="middle"
     >
       {word.toUpperCase()}
     </text>
@@ -96,7 +96,7 @@ const ProjectBadge = ({
             fontSize={140}
             x="39%"
             y="52%"
-            text-anchor="middle"
+            textAnchor="middle"
             letterSpacing={-9}
           >
             {abbreviation}
