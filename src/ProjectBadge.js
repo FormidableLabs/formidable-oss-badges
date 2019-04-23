@@ -1,5 +1,6 @@
 import React from "react";
 
+import abbreviationYAxisFn from "./abbreviationYAxisFn";
 import reducerFn from "./reducerFn";
 import { GlobalStyle, MiddleRing, InnerRing, Svg } from "./ProjectBadge.styles";
 
@@ -25,6 +26,8 @@ const ProjectBadge = ({
       {word.toUpperCase()}
     </text>
   ));
+
+  const abbrYAxis = abbreviationYAxisFn(abbreviation);
 
   return (
     <React.Fragment>
@@ -95,9 +98,9 @@ const ProjectBadge = ({
             fontFamily="Bai Jamjuree Semi Bold"
             fontSize={140}
             x="39%"
-            y="52%"
+            y={abbrYAxis}
             textAnchor="middle"
-            letterSpacing={-9}
+            letterSpacing={-4}
           >
             {abbreviation}
           </text>
