@@ -18,9 +18,7 @@ const dataForExamples = [
     description: "Lowercase Descenders",
     number: 9
   },
-  {
-    abbreviation: "hi"
-  }
+  {}
 ];
 
 const badgesToShow = dataForExamples.map(obj => {
