@@ -1,24 +1,36 @@
 import React from "react";
 
+import abbreviationYAxisFn from "./abbreviationYAxisFn";
 import reducerFn from "./reducerFn";
-import {GlobalStyle, MiddleRing, InnerRing, Svg} from './ProjectBadge.styles'
+import { GlobalStyle, MiddleRing, InnerRing, Svg } from "./ProjectBadge.styles";
 
-const ProjectBadge = ({ color, abbreviation, description, number, className }) => {
-  const descriptionArr = description.split(" ").reduce(reducerFn, []);
+const ProjectBadge = ({
+  color = "#FFFFFF",
+  abbreviation,
+  description,
+  number,
+  className
+}) => {
+  const descriptionArr =
+    description && description.split(" ").reduce(reducerFn, []);
 
-  const descriptionText = descriptionArr.map((word, idx, array) => (
-    <text
-      x="39%"
-      y={`${array.length === 1 ? "66" : 65 + idx * 6}%`}
-      fontFamily="Akkurat Bold"
-      fontSize={`${array.length === 1 ? "24" : "18"}`}
-      letterSpacing={1.8}
-      fill="#1D1E1F"
-      text-anchor="middle"
-    >
-      {word.toUpperCase()}
-    </text>
-  ));
+  const descriptionText =
+    descriptionArr &&
+    descriptionArr.map((word, idx, array) => (
+      <text
+        x="39%"
+        y={`${array.length === 1 ? "66" : 65 + idx * 6}%`}
+        fontFamily="Work Sans Semi Bold"
+        fontSize={`${array.length === 1 ? "24" : "18"}`}
+        letterSpacing={1.8}
+        fill="#1D1E1F"
+        textAnchor="middle"
+      >
+        {word.toUpperCase()}
+      </text>
+    ));
+
+  const abbrYAxis = abbreviationYAxisFn(abbreviation);
 
   return (
     <React.Fragment>
@@ -86,12 +98,12 @@ const ProjectBadge = ({ color, abbreviation, description, number, className }) =
           />
           <text
             fill={color}
-            fontFamily="Alphaville Medium"
+            fontFamily="Bai Jamjuree Semi Bold"
             fontSize={140}
             x="39%"
-            y="52%"
-            text-anchor="middle"
-            letterSpacing={-9}
+            y={abbrYAxis}
+            textAnchor="middle"
+            letterSpacing={-4}
           >
             {abbreviation}
           </text>
@@ -100,7 +112,7 @@ const ProjectBadge = ({ color, abbreviation, description, number, className }) =
             fill={color}
           />
           <text
-            fontFamily="Akkurat Bold, Akkurat"
+            fontFamily="Work Sans Semi Bold"
             fill="#1D1E1F"
             fontSize="24px"
             letterSpacing={0.138}

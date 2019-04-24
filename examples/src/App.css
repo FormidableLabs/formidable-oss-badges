@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 100vh;
+  background: #444;
+}
+
+.badge-container {
+  width: 350px;
+}
+
+svg {
+  width: 100%;
+}
+
+p {
+  color: aliceblue;
+}
