@@ -18,6 +18,7 @@ const ProjectBadge = ({
     descriptionArr &&
     descriptionArr.map((word, idx, array) => (
       <text
+        key={`description-${idx}`}
         x="39%"
         y={`${array.length === 1 ? "66" : 65 + idx * 6}%`}
         fontFamily="Work Sans Semi Bold"
