@@ -1,5 +1,6 @@
 import React from "react";
-import { ProjectBadge } from "formidable-oss-badges";
+import { ProjectBadge, IconBadge } from "formidable-oss-badges";
+import FormidableIcon from "./FormidableIcon";
 import "./App.css";
 
 const dataForExamples = [
@@ -42,7 +43,44 @@ const badgesToShow = dataForExamples.map(obj => {
 });
 
 function App() {
-  return <div className="App">{badgesToShow}</div>;
+  return (
+    <div className="App">
+      {badgesToShow}{" "}
+      <div className="badge-container" key="IconBadge">
+        <IconBadge color="#ff00ff">
+          <FormidableIcon />
+        </IconBadge>
+        <p>Example of IconBadge using an svg</p>
+      </div>
+      <div className="badge-container" key="IconBadge">
+        <IconBadge color="#90dafa">
+          <image
+            x="15%"
+            y="23%"
+            width="50%"
+            href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png"
+          />
+        </IconBadge>
+        <p>Example of IconBadge using a png</p>
+      </div>
+      <div className="badge-container" key="IconBadge">
+        <ProjectBadge
+          abbreviation="R"
+          description="React"
+          number="09"
+          color="#90dafa"
+        >
+          <image
+            x="14%"
+            y="20%"
+            width="50%"
+            href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png"
+          />
+        </ProjectBadge>
+        <p>Example of ProjectBadge using a png</p>
+      </div>
+    </div>
+  );
 }
 
 export default App;

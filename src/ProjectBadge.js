@@ -4,12 +4,16 @@ import abbreviationYAxisFn from "./abbreviationYAxisFn";
 import reducerFn from "./reducerFn";
 import { GlobalStyle, MiddleRing, InnerRing, Svg } from "./ProjectBadge.styles";
 
+// ProjectBadge can accept SVG as children in that case it will
+// replace the abbreviation with the children
+
 const ProjectBadge = ({
   color = "#FFFFFF",
   abbreviation,
   description,
   number,
-  className
+  className,
+  children
 }) => {
   const descriptionArr =
     description && description.split(" ").reduce(reducerFn, []);
@@ -97,17 +101,22 @@ const ProjectBadge = ({
             fill={color}
             fillRule="nonzero"
           />
-          <text
-            fill={color}
-            fontFamily="Bai Jamjuree Semi Bold"
-            fontSize={140}
-            x="39%"
-            y={abbrYAxis}
-            textAnchor="middle"
-            letterSpacing={-4}
-          >
-            {abbreviation}
-          </text>
+          {!!children ? (
+            children
+          ) : (
+            <text
+              fill={color}
+              fontFamily="Bai Jamjuree Semi Bold"
+              fontSize={140}
+              x="39%"
+              y={abbrYAxis}
+              textAnchor="middle"
+              letterSpacing={-4}
+            >
+              {abbreviation}
+            </text>
+          )}
+
           <path
             d="M150.175 9l35.21 18.827c-4.524 15.062-18.576 26.044-35.21 26.044-16.556 0-30.554-10.878-35.146-25.831L150.175 9z"
             fill={color}
