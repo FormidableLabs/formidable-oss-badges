@@ -7,7 +7,6 @@
   "jsnext:main": "dist/formidable-oss-badges.es.js",
   "module": "dist/formidable-oss-badges.es.js",
   "dependencies": {
-    "buble": "0.19.6",
     "styled-components": "4.1.1"
   },
   "devDependencies": {
@@ -18,6 +17,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.3.2",
     "babel-preset-react": "^6.23.0",
+    "buble": "0.19.6",
     "react": "16.8.3",
     "rollup": "^0.55.3",
     "rollup-plugin-babel": "^3.0.3",
