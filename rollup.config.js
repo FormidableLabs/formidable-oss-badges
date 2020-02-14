@@ -58,7 +58,7 @@ const prodPlugins = plugins.concat([
 
 const base = {
   input: 'src/index.js',
-  external: ['react', 'react-dom', 'prismjs', 'buble']
+  external: ['react', 'react-dom', 'prismjs', 'buble', 'styled-components']
 };
 
 const output = {

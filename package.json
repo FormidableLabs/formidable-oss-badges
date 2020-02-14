@@ -7,7 +7,8 @@
   "jsnext:main": "dist/formidable-oss-badges.es.js",
   "module": "dist/formidable-oss-badges.es.js",
   "dependencies": {
-    "buble": "0.19.6"
+    "buble": "0.19.6",
+    "styled-components": "4.1.1"
   },
   "devDependencies": {
     "babel-core": "6.26.3",
