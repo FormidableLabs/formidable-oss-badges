@@ -79,6 +79,10 @@ function App() {
         </ProjectBadge>
         <p>Example of ProjectBadge using a png</p>
       </div>
+      <div className="badge-container" key="IconBadge">
+        <ProjectBadge description="Victory"></ProjectBadge>
+        <p>Example of a Featured ProjectBadge</p>
+      </div>
     </div>
   );
 }
