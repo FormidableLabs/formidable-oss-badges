@@ -1,19 +1,4 @@
-import styled, { keyframes, createGlobalStyle } from "styled-components";
-
-import BaiJamjureeSemiBold from "../fonts/BaiJamjuree-SemiBold.woff";
-import WorkSansSemiBold from "../fonts/WorkSans-SemiBold.woff";
-
-export const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: "Bai Jamjuree Semi Bold";
-    src: url(${BaiJamjureeSemiBold});
-  }
-  
-  @font-face {
-    font-family: "Work Sans Semi Bold";
-    src: url(${WorkSansSemiBold});
-  }
-`;
+import styled, { keyframes } from "styled-components";
 
 export const MiddleRing = styled.path``;
 export const InnerRing = styled.path``;

@@ -1,13 +1,12 @@
 import React from "react";
 
-import { GlobalStyle, Svg } from "./ProjectBadge.styles";
+import { Svg } from "./ProjectBadge.styles";
 
 //  IconBadge accepts any children, you will need to position it youself
 
 const IconBadge = ({ color = "#FFFFFF", className, children }) => {
   return (
     <React.Fragment>
-      <GlobalStyle />
       <Svg viewBox="0 0 380 374" className={className}>
         <defs>
           <filter
