@@ -22,9 +22,8 @@ const dataForExamples = [
   {}
 ];
 
-const badgesToShow = dataForExamples.map(obj => {
-  const { description, abbreviation, number, color } = obj;
-  return (
+const badgesToShow = dataForExamples.map(
+  ({ description, abbreviation, number, color }) => (
     <div className="badge-container" key={description || abbreviation}>
       <ProjectBadge
         abbreviation={abbreviation}
@@ -39,52 +38,49 @@ const badgesToShow = dataForExamples.map(obj => {
         color: {color} ({typeof color})
       </p>
     </div>
-  );
-});
+  )
+);
 
-function App() {
-  return (
-    <div className="App">
-      {badgesToShow}{" "}
-      <div className="badge-container" key="IconBadge">
-        <IconBadge color="#ff00ff">
-          <FormidableIcon />
-        </IconBadge>
-        <p>Example of IconBadge using an svg</p>
-      </div>
-      <div className="badge-container" key="IconBadge">
-        <IconBadge color="#90dafa">
-          <image
-            x="15%"
-            y="23%"
-            width="50%"
-            href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png"
-          />
-        </IconBadge>
-        <p>Example of IconBadge using a png</p>
-      </div>
-      <div className="badge-container" key="IconBadge">
-        <ProjectBadge
-          abbreviation="R"
-          description="React"
-          number="09"
-          color="#90dafa"
-        >
-          <image
-            x="14%"
-            y="20%"
-            width="50%"
-            href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png"
-          />
-        </ProjectBadge>
-        <p>Example of ProjectBadge using a png</p>
-      </div>
-      <div className="badge-container" key="IconBadge">
-        <ProjectBadge description="Victory"></ProjectBadge>
-        <p>Example of a Featured ProjectBadge</p>
-      </div>
+const App = () => (
+  <div className="App">
+    {badgesToShow}{" "}
+    <div className="badge-container" key="IconBadge">
+      <IconBadge color="#ff00ff">
+        <FormidableIcon />
+      </IconBadge>
+      <p>Example of IconBadge using an svg</p>
     </div>
-  );
-}
+    <div className="badge-container" key="IconBadge">
+      <IconBadge color="#90dafa">
+        <image
+          height="100%"
+          width="100%"
+          href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png"
+        />
+      </IconBadge>
+      <p>Example of IconBadge using a png</p>
+    </div>
+    <div className="badge-container" key="IconBadge">
+      <ProjectBadge
+        abbreviation="R"
+        description="React"
+        number="09"
+        color="#90dafa"
+      >
+        <image
+          x="14%"
+          y="20%"
+          width="50%"
+          href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png"
+        />
+      </ProjectBadge>
+      <p>Example of ProjectBadge using a png</p>
+    </div>
+    <div className="badge-container" key="IconBadge">
+      <ProjectBadge description="Victory"></ProjectBadge>
+      <p>Example of a Featured ProjectBadge</p>
+    </div>
+  </div>
+);
 
 export default App;
