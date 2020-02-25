@@ -3,7 +3,6 @@ import React from "react";
 import abbreviationYAxisFn from "./abbreviationYAxisFn";
 import reducerFn from "./reducerFn";
 import { MiddleRing, InnerRing, Svg } from "./ProjectBadge.styles";
-import featuredLogos from "./assets/featuredLogos";
 
 // ProjectBadge can accept SVG as children in that case it will
 // replace the abbreviation with the children
@@ -15,10 +14,6 @@ const ProjectBadge = ({
   className,
   children
 }) => {
-  if (description && featuredLogos[description.toLowerCase()]) {
-    const Logo = featuredLogos[description.toLowerCase()];
-    return <Logo className={className} />;
-  }
   const descriptionArr =
     description && description.split(" ").reduce(reducerFn, []);
 

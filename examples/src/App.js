@@ -1,5 +1,5 @@
 import React from "react";
-import { ProjectBadge, IconBadge } from "formidable-oss-badges";
+import { ProjectBadge, IconBadge, FeaturedBadge } from "formidable-oss-badges";
 import FormidableIcon from "./FormidableIcon";
 import "./App.css";
 
@@ -22,8 +22,8 @@ const dataForExamples = [
 ];
 
 const badgesToShow = dataForExamples.map(
-  ({ description, abbreviation, number, color }) => (
-    <div className="badge-container" key={description || abbreviation}>
+  ({ description, abbreviation, number, color }, idx) => (
+    <div className="badge-container" key={description || abbreviation || idx}>
       <ProjectBadge
         abbreviation={abbreviation}
         description={description}
@@ -43,13 +43,13 @@ const badgesToShow = dataForExamples.map(
 const App = () => (
   <div className="App">
     {badgesToShow}{" "}
-    <div className="badge-container" key="IconBadge">
+    <div className="badge-container">
       <IconBadge color="#ff00ff">
         <FormidableIcon />
       </IconBadge>
       <p>Example of IconBadge using an svg</p>
     </div>
-    <div className="badge-container" key="IconBadge">
+    <div className="badge-container">
       <IconBadge color="#90dafa">
         <image
           height="100%"
@@ -59,7 +59,7 @@ const App = () => (
       </IconBadge>
       <p>Example of IconBadge using a png</p>
     </div>
-    <div className="badge-container" key="IconBadge">
+    <div className="badge-container">
       <ProjectBadge
         abbreviation="R"
         description="React"
@@ -76,8 +76,8 @@ const App = () => (
       </ProjectBadge>
       <p>Example of ProjectBadge using a png</p>
     </div>
-    <div className="badge-container" key="IconBadge">
-      <ProjectBadge description="Victory"></ProjectBadge>
+    <div className="badge-container">
+      <FeaturedBadge name="victory"></FeaturedBadge>
       <p>Example of a Featured ProjectBadge</p>
     </div>
   </div>
