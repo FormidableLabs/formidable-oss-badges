@@ -6,12 +6,12 @@ const FormidableIcon = () => {
       <svg
         version="1.1"
         id="Layer_1"
-        x="15%"
-        y="-6%"
         viewBox="0 0 245.37 315.25"
-        xmlSpace="preserve"
         fill="#F04D21"
-        width="50%"
+        width="70%"
+        height="70%"
+        x="15%"
+        y="15%"
       >
         <g>
           <g>

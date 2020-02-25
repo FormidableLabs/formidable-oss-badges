@@ -2,7 +2,7 @@ import React from "react";
 
 import abbreviationYAxisFn from "./abbreviationYAxisFn";
 import reducerFn from "./reducerFn";
-import { GlobalStyle, MiddleRing, InnerRing, Svg } from "./ProjectBadge.styles";
+import { MiddleRing, InnerRing, Svg } from "./ProjectBadge.styles";
 
 // ProjectBadge can accept SVG as children in that case it will
 // replace the abbreviation with the children
@@ -11,7 +11,6 @@ const ProjectBadge = ({
   color = "#FFFFFF",
   abbreviation,
   description,
-  number,
   className,
   children
 }) => {
@@ -23,12 +22,14 @@ const ProjectBadge = ({
     descriptionArr.map((word, idx, array) => (
       <text
         key={`description-${idx}`}
-        x="39%"
-        y={`${array.length === 1 ? "66" : 65 + idx * 6}%`}
-        fontFamily="Work Sans Semi Bold"
-        fontSize={`${array.length === 1 ? "24" : "18"}`}
+        x="50%"
+        y={`${array.length === 1 ? 74 : 70 + idx * 6}%`}
+        fontFamily="Helvetica"
+        fontSize={`${array.length === 1 ? "44" : "36"}`}
         letterSpacing={1.8}
-        fill="#1D1E1F"
+        fill="#202020"
+        fontWeight="bold"
+        letterSpacing={1}
         textAnchor="middle"
       >
         {word.toUpperCase()}
@@ -39,99 +40,39 @@ const ProjectBadge = ({
 
   return (
     <React.Fragment>
-      <GlobalStyle />
-      <Svg viewBox="0 0 380 374" className={className}>
-        <defs>
-          <filter
-            x="-25.7%"
-            y="-25.2%"
-            width="151.3%"
-            height="150.3%"
-            filterUnits="objectBoundingBox"
-            id="Badge_Copy_svg__a"
-          >
-            <feOffset in="SourceAlpha" result="shadowOffsetOuter1" />
-            <feGaussianBlur
-              stdDeviation={20}
-              in="shadowOffsetOuter1"
-              result="shadowBlurOuter1"
-            />
-            <feColorMatrix
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0"
-              in="shadowBlurOuter1"
-              result="shadowMatrixOuter1"
-            />
-            <feMerge>
-              <feMergeNode in="shadowMatrixOuter1" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-        </defs>
-        <g
-          filter="url(#Badge_Copy_svg__a)"
-          transform="translate(40 34)"
-          x="0"
-          fill="none"
-          fillRule="evenodd"
-        >
+      <Svg viewBox="0 0 600 595">
+        <g fill="none" fillRule="evenodd">
           <path
-            d="M170.918 9.364l97.823 43.419a52 52 0 0 1 30.904 47.528V205.69a52 52 0 0 1-30.904 47.528l-97.823 43.42a52 52 0 0 1-42.192 0l-97.822-43.42A52 52 0 0 1 0 205.689V100.31a52 52 0 0 1 30.904-47.528l97.822-43.42a52 52 0 0 1 42.192 0z"
-            fill="#202020"
+            d="M342.277 9.4l195.971 87.165C575.801 113.268 600 150.515 600 191.616v211.961c0 41.1-24.199 78.348-61.752 95.051l-195.971 87.165a104.029 104.029 0 01-84.554 0L61.752 498.628C24.199 481.925 0 444.678 0 403.578V191.615c0-41.1 24.199-78.348 61.752-95.05L257.723 9.4a104.029 104.029 0 0184.554 0z"
+            fill={color}
           />
           <path
-            d="M7 220h286c-4.967 18.355-52.765 44.09-143.393 77.203C57.192 265.586 9.657 239.852 7 220z"
-            fill={color}
-          />
-          <InnerRing
-            d="M149.822 39.175L45.223 85.501A15.5 15.5 0 0 0 36 99.673v106.543a15.5 15.5 0 0 0 9.314 14.212l104.508 45.485 104.508-45.485a15.5 15.5 0 0 0 9.315-14.212V99.673a15.5 15.5 0 0 0-9.223-14.172l-104.6-46.326zm0-13.124l109.476 48.401c9.717 4.378 16.347 14.34 16.347 25.221v106.543a27.5 27.5 0 0 1-16.526 25.215L149.822 279 40.526 231.431A27.5 27.5 0 0 1 24 206.216V99.673c0-10.88 6.826-21.025 16.364-25.22L149.822 26.05z"
-            fill={color}
-            fillRule="nonzero"
-            opacity={0.4}
-            className="innerRing"
-          />
-          <MiddleRing
-            d="M149.822 26.118L40.691 74.3A28 28 0 0 0 24 99.914v106.172A28 28 0 0 0 40.691 231.7l109.131 48.182L258.954 231.7a28 28 0 0 0 16.69-25.614V99.914a28 28 0 0 0-16.69-25.614L149.822 26.118zM149.988 13l113.657 50.643c14.493 6.399 24 20.428 24 36.271v106.172a40 40 0 0 1-23.844 36.592L149.822 293 35.844 242.678A40 40 0 0 1 12 206.086V99.914c0-15.843 9.66-29.91 23.844-36.23L149.988 13z"
-            fill={color}
-            fillRule="nonzero"
-            opacity={0.7}
-            className="middleRing"
+            d="M327.97 42.47a68.877 68.877 0 00-56.109.037l-196.786 87.92c-23.663 10.572-38.9 34.067-38.9 59.985v213.356c0 26.74 15.739 50.973 40.167 61.848l195.557 87.055a68.877 68.877 0 0056.006.008l195.732-87.07c24.437-10.872 40.184-35.11 40.184-61.856v-212.32c0-26.738-15.738-50.972-40.166-61.847L327.97 42.47z"
+            strokeOpacity={0.3}
+            stroke="#202020"
+            strokeWidth={24.247}
           />
           <path
-            d="M166.05 20.332a40 40 0 0 0-32.455 0l-97.823 43.42A40 40 0 0 0 12 100.311v105.377a40 40 0 0 0 23.772 36.56l97.823 43.42a40 40 0 0 0 32.455 0l97.822-43.42a40 40 0 0 0 23.773-36.56V100.31a40 40 0 0 0-23.773-36.56l-97.822-43.42zm4.868-10.968l97.823 43.419a52 52 0 0 1 30.904 47.528V205.69a52 52 0 0 1-30.904 47.528l-97.823 43.42a52 52 0 0 1-42.192 0l-97.822-43.42A52 52 0 0 1 0 205.689V100.31a52 52 0 0 1 30.904-47.528l97.822-43.42a52 52 0 0 1 42.192 0z"
-            fill={color}
-            fillRule="nonzero"
+            d="M337.399 20.368a92.026 92.026 0 00-74.798 0l-195.97 87.165c-33.221 14.775-54.628 47.725-54.628 84.083v211.961c0 36.358 21.407 69.308 54.627 84.084l195.971 87.164a92.026 92.026 0 0074.798 0l195.97-87.164c33.221-14.776 54.628-47.726 54.628-84.084v-211.96c0-36.359-21.407-69.309-54.627-84.084L337.399 20.368z"
+            strokeOpacity={0.6}
+            stroke="#202020"
+            strokeWidth={24.007}
           />
           {!!children ? (
             children
           ) : (
             <text
-              fill={color}
-              fontFamily="Bai Jamjuree Semi Bold"
-              fontSize={140}
-              x="39%"
-              y={abbrYAxis}
+              fill="#202020"
+              fontFamily="Helvetica"
+              fontSize={230}
+              letterSpacing={-5.5}
               textAnchor="middle"
-              letterSpacing={-4}
+              x="50%"
+              y={abbrYAxis}
             >
               {abbreviation}
             </text>
           )}
-
-          <path
-            d="M150.175 9l35.21 18.827c-4.524 15.062-18.576 26.044-35.21 26.044-16.556 0-30.554-10.878-35.146-25.831L150.175 9z"
-            fill={color}
-          />
-          <text
-            fontFamily="Work Sans Semi Bold"
-            fill="#1D1E1F"
-            fontSize="24px"
-            letterSpacing={0.138}
-            textAnchor="middle"
-            x="39.5%"
-            y="10%"
-          >
-            {number}
-          </text>
           {descriptionText}
         </g>
       </Svg>
