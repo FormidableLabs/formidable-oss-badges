@@ -5,19 +5,18 @@ import "./App.css";
 
 const dataForExamples = [
   {
-    abbreviation: "Bq",
-    description: "Barbeque"
+    abbreviation: "No",
+    description: "Number",
+    color: "#89E"
   },
   {
     abbreviation: "Em",
     description: "Enzyme Matchers",
-    number: "09",
     color: "#E48055"
   },
   {
     abbreviation: "qq",
-    description: "Lowercase Descenders",
-    number: 9
+    description: "Lowercase Descenders"
   },
   {}
 ];
@@ -65,12 +64,13 @@ const App = () => (
         abbreviation="R"
         description="React"
         number="09"
-        color="#90dafa"
+        color="#FFFFFF"
       >
         <image
-          x="14%"
-          y="20%"
-          width="50%"
+          width="70%"
+          height="70%"
+          x="15%"
+          y="10%"
           href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png"
         />
       </ProjectBadge>

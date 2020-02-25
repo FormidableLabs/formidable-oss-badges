@@ -22,7 +22,6 @@ const plugins = [
     }
   }),
   reactSvg({
-    // whether to output jsx
     jsx: true,
     include: "**/*.svg"
   }),

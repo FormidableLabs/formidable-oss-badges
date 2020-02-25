@@ -12,7 +12,6 @@ const ProjectBadge = ({
   color = "#FFFFFF",
   abbreviation,
   description,
-  number,
   className,
   children
 }) => {
@@ -64,17 +63,21 @@ const ProjectBadge = ({
             stroke="#202020"
             strokeWidth={24.007}
           />
-          <text
-            fill="#202020"
-            fontFamily="Helvetica"
-            fontSize={230}
-            letterSpacing={-5.5}
-            textAnchor="middle"
-            x="50%"
-            y={abbrYAxis}
-          >
-            {abbreviation}
-          </text>
+          {!!children ? (
+            children
+          ) : (
+            <text
+              fill="#202020"
+              fontFamily="Helvetica"
+              fontSize={230}
+              letterSpacing={-5.5}
+              textAnchor="middle"
+              x="50%"
+              y={abbrYAxis}
+            >
+              {abbreviation}
+            </text>
+          )}
           {descriptionText}
         </g>
       </Svg>
