@@ -5,18 +5,18 @@ import "./App.css";
 
 const dataForExamples = [
   {
-    abbreviation: "No",
-    description: "Number",
+    abbreviation: "Rp",
+    description: "runpkg",
     color: "#89E"
   },
   {
-    abbreviation: "Em",
-    description: "Enzyme Matchers",
+    abbreviation: "Rn",
+    description: "react native app auth",
     color: "#E48055"
   },
   {
-    abbreviation: "qq",
-    description: "Lowercase Descenders"
+    abbreviation: "Ec",
+    description: "eslint config react native a11y"
   },
   {}
 ];
