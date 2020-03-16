@@ -77,8 +77,20 @@ const App = () => (
       <p>Example of ProjectBadge using a png</p>
     </div>
     <div className="badge-container">
+      <FeaturedBadge name="urql"></FeaturedBadge>
+      <p>urql ProjectBadge</p>
+    </div>
+    <div className="badge-container">
       <FeaturedBadge name="victory"></FeaturedBadge>
-      <p>Example of a Featured ProjectBadge</p>
+      <p>victory ProjectBadge</p>
+    </div>
+    <div className="badge-container">
+      <FeaturedBadge name="renature"></FeaturedBadge>
+      <p>renature ProjectBadge</p>
+    </div>
+    <div className="badge-container">
+      <FeaturedBadge name="spectacle"></FeaturedBadge>
+      <p>Spectacle ProjectBadge</p>
     </div>
   </div>
 );
