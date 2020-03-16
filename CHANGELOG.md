@@ -1,5 +1,9 @@
 # formidable-oss-badges Changelog
 
+## 0.3.2 (2020-03-16)
+
+- [#27](https://github.com/FormidableLabs/formidable-oss-badges/pull/27) Remove unnecessary masks on urql badge
+
 ## 0.3.1 (2020-03-16)
 
 - [#25](https://github.com/FormidableLabs/formidable-oss-badges/pull/25) tweak project badge styles and bring back hover
