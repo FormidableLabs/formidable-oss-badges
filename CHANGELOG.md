@@ -1,5 +1,9 @@
 # formidable-oss-badges Changelog
 
+## 0.3.1 (2020-03-16)
+
+- [#25](https://github.com/FormidableLabs/formidable-oss-badges/pull/25) tweak project badge styles and bring back hover
+
 ## 0.3.0 (2020-03-04)
 
 - `styled-components` is now a peerDependency instead of a real dependency
