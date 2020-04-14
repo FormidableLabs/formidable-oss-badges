@@ -8,17 +8,22 @@ Badges for Formidable Open Source Projects
 - [ProjectBadge](#projectbadge)
   - [Component props](#projectbadge-props)
   - [Component children](#projectbadge-children)
+  - [Usage](#projectbadge-usage)
+- [FeaturedBadge](#featuredbadge)
+  - [Available badges](#available-badges)
+  - [Usage](#featuredbadge-usage)
 - [IconBadge](#iconbadge)
   - [Component props](#iconbadge-props)
   - [Component children](#iconbadge-children)
+  - [Usage](#iconbadge-usage)
 - [Examples](#examples)
 - [Try component locally](#try-the-component-locally)
 
 ## Using the package
 
 - `yarn add formidable-oss-badges` or `npm install formidable-oss-badges`
-- In your react app, `import { ProjectBadge, IconBadge } from "formidable-oss-badges";`
-- Use the `<ProjectBadge />` and/or `<IconBadge></IconBadge>` component as directed below
+- In your react app, `import { FeaturedBadge, IconBadge, ProjectBadge } from "formidable-oss-badges";`
+- Use the `<ProjectBadge />`, `<FeaturedBadge />`, and/or `<IconBadge></IconBadge>` component as directed below
 
 ## ProjectBadge
 
@@ -33,7 +38,7 @@ The `<ProjectBadge />` component takes five, optional, props:
 | description  | String           | Title or brief description. Smaller text, displayed in all-caps.                             | `"Enzyme Matchers"` |
 | className    | String           | Class to apply directly to the SVG                                                           | `"project-badge"`   |
 
-It is recommended to at least include the `color`, `description` and `abbreviation` props.
+It is recommended to at least include the `color`, `description`, and `abbreviation` props.
 
 ### ProjectBadge children
 
@@ -49,9 +54,18 @@ e.g:
 <image x="14%" y="20%" />
 ```
 
-### Featured Badges
+## FeaturedBadge
 
-If the description you pass in matches one of the featured badges available, the featured badge will instead be returned and any customisation will be lost.
+If the description you pass in matches one of the featured badges available, the featured badge will instead be returned and any customization will be lost.
+
+### Available Badges
+
+See [featuredLogos](https://github.com/FormidableLabs/formidable-oss-badges/tree/master/src/assets/featuredLogos) for the latest available lineup.
+
+- `renature`
+- `spectacle`
+- `urql`
+- `victory`
 
 ## IconBadge
 
@@ -70,31 +84,47 @@ This badge should always be given a child.
 
 You will need to position the child yourself.
 
-## Examples
+## Examples (with Images)
 
-1:
+### ProjectBadge Usage
+
+**Example 1:**
 
 ```jsx
 <ProjectBadge color="#89E" abbreviation="No" description="Number" />
 ```
 
-2:
+**Example 2:**
 
 ```jsx
 <ProjectBadge color="#E48055" abbreviation="Em" description="Enzyme Matchers" />
 ```
 
-3:
+**Example 3:**
 
 ```jsx
 <ProjectBadge />
 ```
 
-### Children:
+**Example 5:**
 
-4:
+ProjectBadge with svg child:
 
-IconBadge which just shows an outline:
+```jsx
+<ProjectBadge abbreviation="R" description="React" color="#90dafa">
+  <image
+    x="14%"
+    y="20%"
+    width="50%"
+    href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png"
+  />
+</ProjectBadge>
+```
+
+### IconBadge Usage
+
+
+**Example 4**:
 
 ```jsx
 <IconBadge color="#89E">
@@ -107,28 +137,15 @@ IconBadge which just shows an outline:
 </IconBadge>
 ```
 
-5:
+### FeaturedBadge Usage
 
-ProjectBadge with svg child:
-
-```jsx
-<ProjectBadge abbreviation="R" description="React" number="09" color="#90dafa">
-  <image
-    x="14%"
-    y="20%"
-    width="50%"
-    href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png"
-  />
-</ProjectBadge>
-```
-
-6:
-
-Featured ProjectBadge:
+**Example 6:**
 
 ```jsx
-<ProjectBadge description="Victory" />
+<FeaturedBadge name="victory">
 ```
+
+### Example Badges
 
 | 1                                                                                                               | 2                                                                                                                        | 3                                                                                                              |
 | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
