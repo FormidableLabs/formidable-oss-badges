@@ -56,7 +56,7 @@ e.g:
 
 ## FeaturedBadge
 
-If the description you pass in matches one of the featured badges available, the featured badge will instead be returned and any customization will be lost.
+To use a Featured Formidable Badge, you only need to pass in a single prop, `name`, that matches one of the available badges listed below.
 
 ### Available Badges
 
