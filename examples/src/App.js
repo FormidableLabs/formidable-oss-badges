@@ -7,18 +7,18 @@ const dataForExamples = [
   {
     abbreviation: "Rp",
     description: "runpkg",
-    color: "#89E"
+    color: "#89E",
   },
   {
     abbreviation: "Rn",
     description: "react native app auth",
-    color: "#E48055"
+    color: "#E48055",
   },
   {
     abbreviation: "Ec",
-    description: "eslint config react native a11y"
+    description: "eslint config react native a11y",
   },
-  {}
+  {},
 ];
 
 const badgesToShow = dataForExamples.map(
@@ -77,19 +77,19 @@ const App = () => (
       <p>Example of ProjectBadge using a png</p>
     </div>
     <div className="badge-container">
-      <FeaturedBadge name="urql"></FeaturedBadge>
+      <FeaturedBadge isHoverable name="urql"></FeaturedBadge>
       <p>urql ProjectBadge</p>
     </div>
     <div className="badge-container">
-      <FeaturedBadge name="victory"></FeaturedBadge>
+      <FeaturedBadge isHoverable name="victory"></FeaturedBadge>
       <p>victory ProjectBadge</p>
     </div>
     <div className="badge-container">
-      <FeaturedBadge name="renature"></FeaturedBadge>
+      <FeaturedBadge isHoverable name="renature"></FeaturedBadge>
       <p>renature ProjectBadge</p>
     </div>
     <div className="badge-container">
-      <FeaturedBadge name="spectacle"></FeaturedBadge>
+      <FeaturedBadge isHoverable name="spectacle"></FeaturedBadge>
       <p>Spectacle ProjectBadge</p>
     </div>
   </div>
