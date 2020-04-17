@@ -1,11 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import featuredLogos from "./assets/featuredLogos";
 
 const FeaturedBadge = ({ name, className, isHoverable }) => {
   const Logo = featuredLogos[name.toLowerCase()];
   if (!Logo) return null;
-  return <Logo className={`${isHoverable && "isHoverable "}${className}`} />;
+  const StyledLogo = styled(Logo)`
+    ${({ isHoverable }) =>
+      isHoverable &&
+      `
+    .inner-ring,
+    .outer-ring {
+      transition: 0.3s;
+    }
+
+    &:hover .inner-ring {
+      opacity: 0.3;
+    }
+
+    &:hover .outer-ring {
+      opacity: 0.6;
+    }`}
+  `;
+  return <StyledLogo className={className} isHoverable={isHoverable} />;
 };
 
 FeaturedBadge.propTypes = {
@@ -19,6 +37,7 @@ FeaturedBadge.propTypes = {
     }
   },
   className: PropTypes.string,
+  isHoverable: PropTypes.bool,
 };
 
 FeaturedBadge.defaultProps = {

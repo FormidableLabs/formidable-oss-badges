@@ -12,19 +12,6 @@
   width: 350px;
 }
 
-.isHoverable .inner-ring,
-.isHoverable .outer-ring {
-  transition: 0.3s;
-}
-
-.isHoverable:hover .inner-ring {
-  opacity: 0.3;
-}
-
-.isHoverable:hover .outer-ring {
-  opacity: 0.6;
-}
-
 svg {
   width: 100%;
 }
