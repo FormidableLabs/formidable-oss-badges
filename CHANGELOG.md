@@ -1,5 +1,9 @@
 # formidable-oss-badges Changelog
 
+## 0.3.3 (2020-04-17)
+
+- [#29](https://github.com/FormidableLabs/formidable-oss-badges/pull/29) - adds `isHoverable` prop for `FeaturedBadge` and `ProjetBadge`
+
 ## 0.3.2 (2020-03-16)
 
 - [#27](https://github.com/FormidableLabs/formidable-oss-badges/pull/27) Remove unnecessary masks on urql badge
