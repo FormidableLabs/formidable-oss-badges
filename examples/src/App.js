@@ -22,18 +22,16 @@ const dataForExamples = [
 ];
 
 const badgesToShow = dataForExamples.map(
-  ({ description, abbreviation, number, color }, idx) => (
+  ({ description, abbreviation, color }, idx) => (
     <div className="badge-container" key={description || abbreviation || idx}>
       <ProjectBadge
         abbreviation={abbreviation}
         description={description}
-        number={number}
         color={color}
       />
       <p>
         abbreviation: {abbreviation} ({typeof abbreviation})<br />
         description: {description} ({typeof description})<br />
-        number: {number} ({typeof number}) <br />
         color: {color} ({typeof color})
       </p>
     </div>
@@ -63,7 +61,6 @@ const App = () => (
       <ProjectBadge
         abbreviation="R"
         description="React"
-        number="09"
         color="#FFFFFF"
       >
         <image

@@ -12,4 +12,4 @@
 
 - `styled-components` is now a peerDependency instead of a real dependency
 - badge styles have been updated to reflect new designs
-- new `FeaturedBadge` component renders special badges for `victory`, `urql `, `spectacle`, and `renature`
+- new `FeaturedBadge` component renders special badges for `victory`, `urql`, `spectacle`, and `renature`
