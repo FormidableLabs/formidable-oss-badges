@@ -1,5 +1,9 @@
 # formidable-oss-badges Changelog
 
+## 0.3.4 (2020-04-17)
+
+- [#30](https://github.com/FormidableLabs/formidable-oss-badges/pull/30) - fix `FeaturedBadge` hover styles
+
 ## 0.3.3 (2020-04-17)
 
 - [#29](https://github.com/FormidableLabs/formidable-oss-badges/pull/29) - adds `isHoverable` prop for `FeaturedBadge` and `ProjetBadge`
