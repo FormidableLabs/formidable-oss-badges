@@ -14,18 +14,18 @@ const InnerRing = styled.path`
 
 const Svg = styled.svg`
   &:hover ${OuterRing} {
-    opacity: 0.45;
+    opacity: ${({ isHoverable }) => (isHoverable ? "0.45" : "initial")};
   }
   &:hover ${InnerRing} {
-    opacity: 0.55;
+    opacity: ${({ isHoverable }) => (isHoverable ? "0.55" : "initial")};
   }
 `;
 // ProjectBadge can accept SVG as children in that case it will
 // replace the abbreviation with the children
 
-const includesDescender = str => RegExp(`[gjpqy]`).test(str);
+const includesDescender = (str) => RegExp(`[gjpqy]`).test(str);
 
-const getDescription = props => {
+const getDescription = (props) => {
   const { abbreviation, description } = props;
   if (!description || !description.length) {
     return null;
@@ -51,12 +51,17 @@ const getDescription = props => {
   ));
 };
 
-const ProjectBadge = props => {
-  const { color = "#FFFFFF", abbreviation, children } = props
+const ProjectBadge = (props) => {
+  const {
+    color = "#FFFFFF",
+    abbreviation,
+    children,
+    isHoverable = true,
+  } = props;
   const abbrYAxis = includesDescender(abbreviation) ? BASE_Y : BASE_Y + 2;
   return (
     <React.Fragment>
-      <Svg viewBox="0 0 600 595">
+      <Svg viewBox="0 0 600 595" isHoverable={isHoverable}>
         <g fill="none" fillRule="evenodd">
           <path
             d="M342.277 9.4l195.971 87.165C575.801 113.268 600 150.515 600 191.616v211.961c0 41.1-24.199 78.348-61.752 95.051l-195.971 87.165a104.029 104.029 0 01-84.554 0L61.752 498.628C24.199 481.925 0 444.678 0 403.578V191.615c0-41.1 24.199-78.348 61.752-95.05L257.723 9.4a104.029 104.029 0 0184.554 0z"
