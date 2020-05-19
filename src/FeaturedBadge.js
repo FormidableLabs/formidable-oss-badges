@@ -6,7 +6,7 @@ import featuredLogos from "./assets/featuredLogos";
 const FeaturedBadge = ({ name, className, isHoverable }) => {
   const Logo = featuredLogos[name.toLowerCase()];
   if (!Logo) return null;
-  const StyledLogo = styled(Logo)`
+  const StyledLogo = styled(({ isHoverable, ...rest }) => <Logo {...rest} />)`
     ${({ isHoverable }) =>
       isHoverable &&
       `
