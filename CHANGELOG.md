@@ -1,5 +1,9 @@
 # formidable-oss-badges Changelog
 
+## 0.3.5 (2020-05-20)
+
+-[#31](https://github.com/FormidableLabs/formidable-oss-badges/pull/31) - Prevent `isHoverable` on svg node
+
 ## 0.3.4 (2020-04-17)
 
 - [#30](https://github.com/FormidableLabs/formidable-oss-badges/pull/30) - fix `FeaturedBadge` hover styles
