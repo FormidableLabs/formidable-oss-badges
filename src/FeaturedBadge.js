@@ -3,27 +3,32 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import featuredLogos from "./assets/featuredLogos";
 
+const StyledLogo = styled.svg`
+  ${(props) =>
+    props.isHoverable &&
+    `
+      .inner-ring,
+      .outer-ring {
+        transition: 0.3s;
+      }
+
+      &:hover .inner-ring {
+        opacity: 0.3;
+      }
+
+      &:hover .outer-ring {
+        opacity: 0.6;
+      }
+  `}
+`;
+
 const FeaturedBadge = ({ name, className, isHoverable }) => {
   const Logo = featuredLogos[name.toLowerCase()];
   if (!Logo) return null;
-  const StyledLogo = styled(({ isHoverable, ...rest }) => <Logo {...rest} />)`
-    ${({ isHoverable }) =>
-      isHoverable &&
-      `
-    .inner-ring,
-    .outer-ring {
-      transition: 0.3s;
-    }
 
-    &:hover .inner-ring {
-      opacity: 0.3;
-    }
-
-    &:hover .outer-ring {
-      opacity: 0.6;
-    }`}
-  `;
-  return <StyledLogo className={className} isHoverable={isHoverable} />;
+  return (
+    <StyledLogo as={Logo} className={className} isHoverable={isHoverable} />
+  );
 };
 
 FeaturedBadge.propTypes = {
