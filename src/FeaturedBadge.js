@@ -3,7 +3,13 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import featuredLogos from "./assets/featuredLogos";
 
-const StyledLogo = styled.svg`
+const StyledLogo = styled(({ tagName, isHoverable, ...props }) => {
+  const Component = tagName || "svg";
+  // Do not forward `isHoverable` to DOM
+  // This method can be replaced with `styled.svg.withConfig({ shouldForwardProp: ... })`
+  // with styled-components@v5.1
+  return <Component {...props} />;
+})`
   ${(props) =>
     props.isHoverable &&
     `
@@ -27,7 +33,11 @@ const FeaturedBadge = ({ name, className, isHoverable }) => {
   if (!Logo) return null;
 
   return (
-    <StyledLogo as={Logo} className={className} isHoverable={isHoverable} />
+    <StyledLogo
+      tagName={Logo}
+      className={className}
+      isHoverable={isHoverable}
+    />
   );
 };
 
