@@ -1,6 +1,6 @@
 {
   "name": "formidable-oss-badges",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "Badges for Formidable OSS",
   "license": "MIT",
   "main": "dist/formidable-oss-badges.cjs.js",

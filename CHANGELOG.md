@@ -1,5 +1,9 @@
 # formidable-oss-badges Changelog
 
+## 0.3.6 (2021-05-10)
+
+- Update dependencies
+
 ## 0.3.5 (2020-05-20)
 
 -[#31](https://github.com/FormidableLabs/formidable-oss-badges/pull/31) - Prevent `isHoverable` on svg node
