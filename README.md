@@ -169,3 +169,8 @@ To try out the badge components locally:
 You can then edit `examples/src/App.js`, either by returning the components directly, or by adding an object with the props you would like to trial in the `dataForExamples` array.
 
 Note that this array is currently just used for passing _props_ into `<ProjectBadge />` and not for passing children or for rendering `<IconBadge />`.
+
+
+## Maintenance Status
+
+**Active:** Formidable is actively working on this project, and we expect to continue for work for the foreseeable future. Bug reports, feature requests and pull requests are welcome.
