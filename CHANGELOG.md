@@ -1,5 +1,9 @@
 # formidable-oss-badges Changelog
 
+## 0.4.0 (2022-03-15)
+
+- [#61](https://github.com/FormidableLabs/formidable-oss-badges/pull/61) - adds support for Nuka to FeaturedBadge
+
 ## 0.3.6 (2021-05-10)
 
 - Update dependencies
