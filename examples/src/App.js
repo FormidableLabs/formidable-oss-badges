@@ -89,6 +89,10 @@ const App = () => (
       <FeaturedBadge isHoverable name="spectacle"></FeaturedBadge>
       <p>Spectacle ProjectBadge</p>
     </div>
+    <div className="badge-container">
+      <FeaturedBadge isHoverable name="nuka"></FeaturedBadge>
+      <p>Nuka ProjectBadge</p>
+    </div>
   </div>
 );
 
