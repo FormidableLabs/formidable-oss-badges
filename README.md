@@ -66,6 +66,7 @@ See [featuredLogos](https://github.com/FormidableLabs/formidable-oss-badges/tree
 - `spectacle`
 - `urql`
 - `victory`
+- `nuka`
 
 ## IconBadge
 
