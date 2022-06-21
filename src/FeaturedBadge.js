@@ -3,27 +3,42 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import featuredLogos from "./assets/featuredLogos";
 
+const StyledLogo = styled(({ tagName, isHoverable, ...props }) => {
+  const Component = tagName || "svg";
+  // Do not forward `isHoverable` to DOM
+  // This method can be replaced with `styled.svg.withConfig({ shouldForwardProp: ... })`
+  // with styled-components@v5.1
+  return <Component {...props} />;
+})`
+  ${(props) =>
+    props.isHoverable &&
+    `
+      .inner-ring,
+      .outer-ring {
+        transition: 0.3s;
+      }
+
+      &:hover .inner-ring {
+        opacity: 0.3;
+      }
+
+      &:hover .outer-ring {
+        opacity: 0.6;
+      }
+  `}
+`;
+
 const FeaturedBadge = ({ name, className, isHoverable }) => {
   const Logo = featuredLogos[name.toLowerCase()];
   if (!Logo) return null;
-  const StyledLogo = styled(({ isHoverable, ...rest }) => <Logo {...rest} />)`
-    ${({ isHoverable }) =>
-      isHoverable &&
-      `
-    .inner-ring,
-    .outer-ring {
-      transition: 0.3s;
-    }
 
-    &:hover .inner-ring {
-      opacity: 0.3;
-    }
-
-    &:hover .outer-ring {
-      opacity: 0.6;
-    }`}
-  `;
-  return <StyledLogo className={className} isHoverable={isHoverable} />;
+  return (
+    <StyledLogo
+      tagName={Logo}
+      className={className}
+      isHoverable={isHoverable}
+    />
+  );
 };
 
 FeaturedBadge.propTypes = {
