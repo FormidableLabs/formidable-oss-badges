@@ -1,5 +1,11 @@
 # formidable-oss-badges Changelog
 
+## 0.5.0 (2022-06-22)
+
+- Adds RN Owl to FeaturedBadge via [#67](https://github.com/FormidableLabs/formidable-oss-badges/pull/67)
+- Small logo options (no text) via [#67](https://github.com/FormidableLabs/formidable-oss-badges/pull/67)
+- SVG optimizations/a11y improvements via [#67](https://github.com/FormidableLabs/formidable-oss-badges/pull/67)
+
 ## 0.4.0 (2022-03-15)
 
 - [#61](https://github.com/FormidableLabs/formidable-oss-badges/pull/61) - adds support for Nuka to FeaturedBadge
