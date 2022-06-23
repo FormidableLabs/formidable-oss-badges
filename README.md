@@ -69,6 +69,15 @@ See [featuredLogos](https://github.com/FormidableLabs/formidable-oss-badges/tree
 - `urql`
 - `victory`
 - `nuka`
+- `owl`
+
+### Additional props
+
+| Prop        | Type    | Description              | Default |
+| ----------- | ------- | ------------------------ | ------- |
+| className   | String  | Additional class names   | `''`    |
+| isHoverable | Boolean | Add hover style effects  | `false` |
+| small       | Boolean | Small badge w/ icon only | `false` |
 
 ## IconBadge
 
@@ -126,7 +135,6 @@ ProjectBadge with svg child:
 
 ### IconBadge Usage
 
-
 **Example 4**:
 
 ```jsx
@@ -172,7 +180,6 @@ To try out the badge components locally:
 You can then edit `examples/src/App.js`, either by returning the components directly, or by adding an object with the props you would like to trial in the `dataForExamples` array.
 
 Note that this array is currently just used for passing _props_ into `<ProjectBadge />` and not for passing children or for rendering `<IconBadge />`.
-
 
 ## Maintenance Status
 
