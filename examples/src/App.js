@@ -58,11 +58,7 @@ const App = () => (
       <p>Example of IconBadge using a png</p>
     </div>
     <div className="badge-container">
-      <ProjectBadge
-        abbreviation="R"
-        description="React"
-        color="#FFFFFF"
-      >
+      <ProjectBadge abbreviation="R" description="React" color="#FFFFFF">
         <image
           width="70%"
           height="70%"
@@ -92,6 +88,10 @@ const App = () => (
     <div className="badge-container">
       <FeaturedBadge isHoverable name="nuka"></FeaturedBadge>
       <p>Nuka ProjectBadge</p>
+    </div>
+    <div className="badge-container">
+      <FeaturedBadge isHoverable name="owl"></FeaturedBadge>
+      <p>React Native Owl ProjectBadge</p>
     </div>
   </div>
 );
