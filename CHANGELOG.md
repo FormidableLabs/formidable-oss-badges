@@ -1,5 +1,10 @@
 # formidable-oss-badges Changelog
 
+## 0.5.0 (2022-06-23)
+
+- [#68](https://github.com/FormidableLabs/formidable-oss-badges/pull/68) - fixes render warning for FeaturedBadge
+- [#67](https://github.com/FormidableLabs/formidable-oss-badges/pull/67) - adds support for Owl to FeaturedBadge, adds `small` prop to allow for small icon only badges
+
 ## 0.4.0 (2022-03-15)
 
 - [#61](https://github.com/FormidableLabs/formidable-oss-badges/pull/61) - adds support for Nuka to FeaturedBadge
