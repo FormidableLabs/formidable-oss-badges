@@ -1,9 +1,15 @@
 # formidable-oss-badges Changelog
 
-## 0.5.0 (2022-06-23)
+## 0.5.1 (2022-06-24)
 
-- [#68](https://github.com/FormidableLabs/formidable-oss-badges/pull/68) - fixes render warning for FeaturedBadge
-- [#67](https://github.com/FormidableLabs/formidable-oss-badges/pull/67) - adds support for Owl to FeaturedBadge, adds `small` prop to allow for small icon only badges
+- Fixes render warning for FeaturedBadge via [#68](https://github.com/FormidableLabs/formidable-oss-badges/pull/68)
+- Replaces SVG width and height with viewbox attribute via [#68](https://github.com/FormidableLabs/formidable-oss-badges/pull/68)
+
+## 0.5.0 (2022-06-22)
+
+- Adds RN Owl to FeaturedBadge via [#67](https://github.com/FormidableLabs/formidable-oss-badges/pull/67)
+- Small logo options (no text) via [#67](https://github.com/FormidableLabs/formidable-oss-badges/pull/67)
+- SVG optimizations/a11y improvements via [#67](https://github.com/FormidableLabs/formidable-oss-badges/pull/67)
 
 ## 0.4.0 (2022-03-15)
 
