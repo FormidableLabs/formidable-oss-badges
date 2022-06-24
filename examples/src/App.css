@@ -12,6 +12,11 @@
   width: 350px;
 }
 
+.small {
+  margin: 1rem 2rem;
+  width: 25%;
+}
+
 svg {
   width: 100%;
 }

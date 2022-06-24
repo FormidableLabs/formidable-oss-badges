@@ -93,6 +93,15 @@ const App = () => (
       <FeaturedBadge isHoverable name="owl"></FeaturedBadge>
       <p>React Native Owl ProjectBadge</p>
     </div>
+    <div className="badge-container">
+      <FeaturedBadge className="small" small name="urql"></FeaturedBadge>
+      <FeaturedBadge className="small" small name="victory"></FeaturedBadge>
+      <FeaturedBadge className="small" small name="renature"></FeaturedBadge>
+      <FeaturedBadge className="small" small name="spectacle"></FeaturedBadge>
+      <FeaturedBadge className="small" small name="nuka"></FeaturedBadge>
+      <FeaturedBadge className="small" small name="owl"></FeaturedBadge>
+      <p>Small Badges</p>
+    </div>
   </div>
 );
 
