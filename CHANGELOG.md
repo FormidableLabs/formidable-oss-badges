@@ -1,5 +1,9 @@
 # formidable-oss-badges Changelog
 
+## 0.5.2 (2022-07-08)
+
+- Add overflow to nuka badge via [#69](https://github.com/FormidableLabs/formidable-oss-badges/pull/69)
+
 ## 0.5.1 (2022-06-24)
 
 - Fixes render warning for FeaturedBadge via [#68](https://github.com/FormidableLabs/formidable-oss-badges/pull/68)
