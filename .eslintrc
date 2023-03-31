@@ -1,0 +1,32 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/recommended",
+    "plugin:storybook/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "semi": "off",
+    "@typescript-eslint/semi": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-unused-vars": "off",
+    "import/no-unresolved": "off",
+    "import/named": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal"]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["./*.js"],
+      "env": {
+        "node": true
+      }
+    }
+  ]
+}

@@ -97,4 +97,4 @@ export default (props: React.SVGAttributes<SVGElement>) => (
       </clipPath>
     </defs>
   </svg>
-);
+)

@@ -100,4 +100,4 @@ export default (props: React.SVGAttributes<SVGElement>) => (
       ></path>
     </g>
   </svg>
-);
+)

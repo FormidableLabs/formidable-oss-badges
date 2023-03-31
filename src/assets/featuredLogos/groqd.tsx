@@ -68,4 +68,4 @@ export default (props: React.SVGAttributes<SVGElement>) => (
       d="M370.5 164h-30a7.5 7.5 0 000 15h30a7.5 7.5 0 000-15z"
     ></path>
   </svg>
-);
+)

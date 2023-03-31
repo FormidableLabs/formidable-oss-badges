@@ -1,29 +1,29 @@
-import FeaturedBadge from "./FeaturedBadge";
-import { ComponentStory } from "@storybook/react";
+import { ComponentStory } from "@storybook/react"
+import FeaturedBadge from "./FeaturedBadge"
 
 export default {
   title: "FeaturedBadge",
   component: FeaturedBadge,
-};
+}
 
-const Template: ComponentStory<typeof FeaturedBadge> = (args) => (
+const Template: ComponentStory<typeof FeaturedBadge> = args => (
   <FeaturedBadge style={{ width: 250 }} {...args} />
-);
+)
 
-export const Spectacle = Template.bind({});
-Spectacle.args = { name: "spectacle" };
+export const Spectacle = Template.bind({})
+Spectacle.args = { name: "spectacle" }
 
-export const Groqd = Template.bind({});
-Groqd.args = { name: "groqd" };
+export const Groqd = Template.bind({})
+Groqd.args = { name: "groqd" }
 
-export const Nuka = Template.bind({});
-Nuka.args = { name: "nuka" };
+export const Nuka = Template.bind({})
+Nuka.args = { name: "nuka" }
 
-export const ReactNativeOwl = Template.bind({});
-ReactNativeOwl.args = { name: "owl" };
+export const ReactNativeOwl = Template.bind({})
+ReactNativeOwl.args = { name: "owl" }
 
-export const Victory = Template.bind({});
-Victory.args = { name: "victory" };
+export const Victory = Template.bind({})
+Victory.args = { name: "victory" }
 
-export const Urql = Template.bind({});
-Urql.args = { name: "urql" };
+export const Urql = Template.bind({})
+Urql.args = { name: "urql" }

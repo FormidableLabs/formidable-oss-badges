@@ -1,10 +1,10 @@
-import renature from "./renature";
-import victory from "./victory";
-import spectacle from "./spectacle";
-import urql from "./urql";
-import nuka from "./nuka";
-import owl from "./owl";
-import groqd from "./groqd";
+import renature from "./renature"
+import victory from "./victory"
+import spectacle from "./spectacle"
+import urql from "./urql"
+import nuka from "./nuka"
+import owl from "./owl"
+import groqd from "./groqd"
 
 export default {
   renature,
@@ -14,4 +14,4 @@ export default {
   nuka,
   owl,
   groqd,
-};
+}

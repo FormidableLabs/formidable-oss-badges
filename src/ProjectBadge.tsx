@@ -1,20 +1,20 @@
-import React, { CSSProperties, Fragment } from "react";
-import reducerFn from "./reducerFn";
-import clsx from "clsx";
-import styles from "./styles.module.css";
+import React, { CSSProperties, Fragment } from "react"
+import clsx from "clsx"
+import reducerFn from "./reducerFn"
+import styles from "./styles.module.css"
 
-const BLACK = "#202020";
-const BASE_Y = 58;
-const includesDescender = (str: string) => RegExp(`[gjpqy]`).test(str);
+const BLACK = "#202020"
+const BASE_Y = 58
+const includesDescender = (str: string) => RegExp(`[gjpqy]`).test(str)
 
 const getDescription = (props: any) => {
-  const { abbreviation, description } = props;
+  const { abbreviation, description } = props
   if (!description || !description.length) {
-    return null;
+    return null
   }
-  const descYAxis = includesDescender(abbreviation) ? BASE_Y + 15 : BASE_Y + 11;
-  const longDesc = description && description.length > 11;
-  const descriptionArr = description.split(" ").reduce(reducerFn, []);
+  const descYAxis = includesDescender(abbreviation) ? BASE_Y + 15 : BASE_Y + 11
+  const longDesc = description && description.length > 11
+  const descriptionArr = description.split(" ").reduce(reducerFn, [])
   return descriptionArr.map((word: string, idx: number) => (
     <text
       key={`description-${idx}`}
@@ -29,18 +29,18 @@ const getDescription = (props: any) => {
     >
       {word.toUpperCase()}
     </text>
-  ));
-};
+  ))
+}
 
 type Props = {
-  color?: string;
-  abbreviation: string;
-  description: string;
-  children?: React.ReactNode;
-  className?: string;
-  isHoverable?: boolean;
-  style?: CSSProperties;
-};
+  color?: string
+  abbreviation: string
+  description: string
+  children?: React.ReactNode
+  className?: string
+  isHoverable?: boolean
+  style?: CSSProperties
+}
 
 const ProjectBadge = (props: Props) => {
   const {
@@ -50,8 +50,8 @@ const ProjectBadge = (props: Props) => {
     className,
     style,
     isHoverable = true,
-  } = props;
-  const abbrYAxis = includesDescender(abbreviation) ? BASE_Y : BASE_Y + 2;
+  } = props
+  const abbrYAxis = includesDescender(abbreviation) ? BASE_Y : BASE_Y + 2
   return (
     <Fragment>
       <svg
@@ -78,7 +78,7 @@ const ProjectBadge = (props: Props) => {
             stroke={BLACK}
             strokeWidth={24.007}
           />
-          {!!children ? (
+          {children ? (
             children
           ) : (
             <text
@@ -97,7 +97,7 @@ const ProjectBadge = (props: Props) => {
         </g>
       </svg>
     </Fragment>
-  );
-};
+  )
+}
 
-export default ProjectBadge;
+export default ProjectBadge
