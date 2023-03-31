@@ -1,11 +1,13 @@
 {
   "presets": [
-    ["env", { "loose": true }],
-    "react"
+    [
+      "@babel/preset-env",
+      {
+        "loose": true
+      }
+    ],
+    "@babel/preset-typescript",
+    ["@babel/preset-react", { "runtime": "automatic" }]
   ],
-  "plugins": [
-    "add-module-exports",
-    "transform-object-rest-spread",
-    "transform-class-properties"
-  ]
+  "plugins": []
 }
