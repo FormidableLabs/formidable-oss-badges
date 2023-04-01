@@ -25,7 +25,7 @@ Badges for Formidable Open Source Projects
 
 - `yarn add formidable-oss-badges` or `npm install formidable-oss-badges`
 - In your react app, `import { FeaturedBadge, ProjectBadge } from "formidable-oss-badges";`
-- To get hover styles using CSS modules `import "formidable-oss-badges/style.css";`
+- To get hover styles using CSS modules `import "formidable-oss-badges/dist/style.css";`
 - Use the `<ProjectBadge />` or `<FeaturedBadge />` component as directed below
 
 ## ProjectBadge

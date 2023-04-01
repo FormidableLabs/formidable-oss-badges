@@ -1,10 +1,10 @@
-import renature from "./renature"
-import victory from "./victory"
-import spectacle from "./spectacle"
-import urql from "./urql"
-import nuka from "./nuka"
-import owl from "./owl"
-import groqd from "./groqd"
+import renature from "./renature.svg"
+import victory from "./victory.svg"
+import spectacle from "./spectacle.svg"
+import urql from "./urql.svg"
+import nuka from "./nuka.svg"
+import owl from "./owl.svg"
+import groqd from "./groqd.svg"
 
 export default {
   renature,

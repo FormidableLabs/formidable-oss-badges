@@ -7,7 +7,17 @@ const BLACK = "#202020"
 const BASE_Y = 58
 const includesDescender = (str: string) => RegExp(`[gjpqy]`).test(str)
 
-const getDescription = (props: any) => {
+type Props = {
+  color?: string
+  abbreviation: string
+  description: string
+  children?: React.ReactNode
+  className?: string
+  isHoverable?: boolean
+  style?: CSSProperties
+}
+
+const getDescription = (props: Props) => {
   const { abbreviation, description } = props
   if (!description || !description.length) {
     return null
@@ -30,16 +40,6 @@ const getDescription = (props: any) => {
       {word.toUpperCase()}
     </text>
   ))
-}
-
-type Props = {
-  color?: string
-  abbreviation: string
-  description: string
-  children?: React.ReactNode
-  className?: string
-  isHoverable?: boolean
-  style?: CSSProperties
 }
 
 const ProjectBadge = (props: Props) => {
