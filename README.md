@@ -14,10 +14,6 @@ Badges for Formidable Open Source Projects
 - [FeaturedBadge](#featuredbadge)
   - [Available badges](#available-badges)
   - [Usage](#featuredbadge-usage)
-- [IconBadge](#iconbadge)
-  - [Component props](#iconbadge-props)
-  - [Component children](#iconbadge-children)
-  - [Usage](#iconbadge-usage)
 - [Examples](#examples)
 - [Try component locally](#try-the-component-locally)
 
