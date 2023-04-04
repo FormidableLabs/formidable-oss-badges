@@ -1,4 +1,4 @@
-name: react-live Release Workflow
+name: formidable-oss-badges Release Workflow
 
 on:
   push:
