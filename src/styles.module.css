@@ -1,0 +1,13 @@
+.hoverableLogo :global(.inner-ring),
+.hoverableLogo :global(.outer-ring) {
+  will-change: opacity;
+  transition: 0.3s ease-in-out;
+}
+
+.hoverableLogo:hover :global(.inner-ring) {
+  opacity: 0.3;
+}
+
+.hoverableLogo:hover :global(.outer-ring) {
+  opacity: 0.6;
+}

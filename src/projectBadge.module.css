@@ -1,0 +1,12 @@
+.projectBadge :global(.inner-ring),
+.projectBadge :global(.outer-ring) {
+  transition: 0.3s;
+}
+
+.projectBadge:hover :global(.inner-ring) {
+  opacity: 0.3;
+}
+
+.projectBadge:hover :global(.outer-ring) {
+  opacity: 0.6;
+}

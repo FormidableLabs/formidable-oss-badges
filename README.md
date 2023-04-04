@@ -24,8 +24,9 @@ Badges for Formidable Open Source Projects
 ## Using the package
 
 - `yarn add formidable-oss-badges` or `npm install formidable-oss-badges`
-- In your react app, `import { FeaturedBadge, IconBadge, ProjectBadge } from "formidable-oss-badges";`
-- Use the `<ProjectBadge />`, `<FeaturedBadge />`, and/or `<IconBadge></IconBadge>` component as directed below
+- In your react app, `import { FeaturedBadge, ProjectBadge } from "formidable-oss-badges";`
+- To get hover styles using CSS modules `import "formidable-oss-badges/dist/style.css";`
+- Use the `<ProjectBadge />` or `<FeaturedBadge />` component as directed below
 
 ## ProjectBadge
 
@@ -70,31 +71,14 @@ See [featuredLogos](https://github.com/FormidableLabs/formidable-oss-badges/tree
 - `victory`
 - `nuka`
 - `owl`
+- `groqd`
 
 ### Additional props
 
 | Prop        | Type    | Description              | Default |
 | ----------- | ------- | ------------------------ | ------- |
 | className   | String  | Additional class names   | `''`    |
-| isHoverable | Boolean | Add hover style effects  | `false` |
-| small       | Boolean | Small badge w/ icon only | `false` |
-
-## IconBadge
-
-### IconBadge props
-
-`<IconBadge />` only accepts a color prop.
-Prop | Type | Description | Example |
-| ------------ | ---------------- | -------------------------------------------------------------------------------------------- | ------------------- |
-| color | String (hex/RGB) | Base color of the badge | `"#FF00FF"` |
-
-### IconBadge children
-
-Like `ProjectBadge`, will accept any svg child (we recommend to use an `<image/>` with an embedded png, svg or lossless image format of your choice. See example 4).
-
-This badge should always be given a child.
-
-You will need to position the child yourself.
+| isHoverable | Boolean | Add hover style effects  | `true` |
 
 ## Examples (with Images)
 
@@ -133,21 +117,6 @@ ProjectBadge with svg child:
 </ProjectBadge>
 ```
 
-### IconBadge Usage
-
-**Example 4**:
-
-```jsx
-<IconBadge color="#89E">
-  <image
-    x="14%"
-    y="20%"
-    width="50%"
-    href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png"
-  />
-</IconBadge>
-```
-
 ### FeaturedBadge Usage
 
 **Example 6:**
@@ -172,14 +141,8 @@ To try out the badge components locally:
 
 1. `git clone` this repo
 2. `cd formidable-oss-badges`
-3. `yarn && yarn build && yarn link` or `npm i && npm run build && npm link`
-4. `cd examples`
-5. `yarn link "formidable-oss-badges"` or `npm link "formidable-oss-badges"`
-6. `yarn && yarn start` or `npm i && npm start` to run a basic React app prepopulated with basic examples
-
-You can then edit `examples/src/App.js`, either by returning the components directly, or by adding an object with the props you would like to trial in the `dataForExamples` array.
-
-Note that this array is currently just used for passing _props_ into `<ProjectBadge />` and not for passing children or for rendering `<IconBadge />`.
+3. `yarn install`
+4. `yarn storybook`
 
 ## Maintenance Status
 
