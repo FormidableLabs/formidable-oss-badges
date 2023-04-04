@@ -1,5 +1,12 @@
 # formidable-oss-badges Changelog
 
+## 1.1.0
+
+### Minor Changes
+
+- Adds support for exporting available badges as an array
+  ([#77](https://github.com/FormidableLabs/formidable-oss-badges/pull/77))
+
 ## 1.0.0
 
 ### Major Changes
