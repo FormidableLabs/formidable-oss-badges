@@ -27,3 +27,6 @@ Victory.args = { name: "victory" }
 
 export const Urql = Template.bind({})
 Urql.args = { name: "urql" }
+
+export const Envy = Template.bind({})
+Envy.args = { name: "envy" }

@@ -5,6 +5,7 @@ import urql from "./urql.svg"
 import nuka from "./nuka.svg"
 import owl from "./owl.svg"
 import groqd from "./groqd.svg"
+import envy from "./envy.svg"
 
 export default {
   renature,
@@ -14,4 +15,5 @@ export default {
   nuka,
   owl,
   groqd,
+  envy,
 }
