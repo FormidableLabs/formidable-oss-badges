@@ -1,5 +1,12 @@
 # formidable-oss-badges Changelog
 
+## 1.2.0
+
+### Minor Changes
+
+- Add Envy
+  ([#79](https://github.com/FormidableLabs/formidable-oss-badges/pull/79))
+
 ## 1.1.0
 
 ### Minor Changes
