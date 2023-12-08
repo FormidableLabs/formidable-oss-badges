@@ -6,6 +6,7 @@ import nuka from "./nuka.svg"
 import owl from "./owl.svg"
 import groqd from "./groqd.svg"
 import envy from "./envy.svg"
+import figlog from "./figlog.svg"
 
 export default {
   renature,
@@ -16,4 +17,5 @@ export default {
   owl,
   groqd,
   envy,
+  figlog,
 }

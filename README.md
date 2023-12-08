@@ -68,6 +68,8 @@ See [featuredLogos](https://github.com/FormidableLabs/formidable-oss-badges/tree
 - `nuka`
 - `owl`
 - `groqd`
+- `envy`
+- `figlog`
 
 ### Additional props
 
