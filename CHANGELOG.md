@@ -1,12 +1,5 @@
 # formidable-oss-badges Changelog
 
-## 1.3.0
-
-### Minor Changes
-
-- Add FigLog
-  ([#81](https://github.com/FormidableLabs/formidable-oss-badges/pull/81))
-
 ## 1.2.0
 
 ### Minor Changes
