@@ -30,3 +30,6 @@ Urql.args = { name: "urql" }
 
 export const Envy = Template.bind({})
 Envy.args = { name: "envy" }
+
+export const FigLog = Template.bind({})
+FigLog.args = { name: "figlog" }
