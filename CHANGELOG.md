@@ -1,5 +1,12 @@
 # formidable-oss-badges Changelog
 
+## 1.3.1
+
+### Patch Changes
+
+- Remove explicit dimensions from FigLog
+  ([#84](https://github.com/FormidableLabs/formidable-oss-badges/pull/84))
+
 ## 1.3.0
 
 ### Minor Changes
