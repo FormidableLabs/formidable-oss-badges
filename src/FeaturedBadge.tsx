@@ -1,9 +1,9 @@
 import clsx from "clsx"
-import { CSSProperties } from "react"
+import { CSSProperties, SVGProps } from "react"
 import * as featuredLogos from "./assets/featuredLogos"
 import styles from "./styles.module.css"
 
-type Props = {
+type Props = SVGProps<SVGElement> & {
   name: keyof typeof featuredLogos.default
   className?: string
   isHoverable?: boolean
@@ -15,6 +15,7 @@ const FeaturedBadge = ({
   className,
   style,
   isHoverable = true,
+  ...rest
 }: Props) => {
   const Logo =
     featuredLogos.default[
@@ -26,6 +27,7 @@ const FeaturedBadge = ({
     <Logo
       className={clsx(isHoverable && styles.hoverableLogo, className)}
       style={style}
+      {...rest}
     />
   )
 }
