@@ -1,5 +1,12 @@
 # formidable-oss-badges Changelog
 
+## 1.3.2
+
+### Patch Changes
+
+- Passthrough SVG props to badges
+  ([#86](https://github.com/FormidableLabs/formidable-oss-badges/pull/86))
+
 ## 1.3.1
 
 ### Patch Changes
