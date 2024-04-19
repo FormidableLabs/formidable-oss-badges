@@ -52,6 +52,7 @@ const ProjectBadge = (props: Props) => {
     style,
     isHoverable = true,
     simple = false,
+    ...rest
   } = props
   let baseY = BASE_Y
   if (simple) {
@@ -64,6 +65,7 @@ const ProjectBadge = (props: Props) => {
         viewBox="0 0 600 595"
         className={clsx(isHoverable && styles.hoverableLogo, className)}
         style={style}
+        {...rest}
       >
         <g fill="none" fillRule="evenodd">
           <path
