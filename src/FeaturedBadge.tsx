@@ -8,6 +8,7 @@ type Props = SVGProps<SVGElement> & {
   className?: string
   isHoverable?: boolean
   style?: CSSProperties
+  simple?: boolean
 }
 
 const FeaturedBadge = ({
@@ -15,12 +16,12 @@ const FeaturedBadge = ({
   className,
   style,
   isHoverable = true,
+  simple = false,
   ...rest
 }: Props) => {
+  const keyName = simple ? `${name.toLowerCase()}Simple` : name.toLowerCase()
   const Logo =
-    featuredLogos.default[
-      name.toLowerCase() as keyof typeof featuredLogos.default
-    ]
+    featuredLogos.default[keyName as keyof typeof featuredLogos.default]
   if (!Logo) return null
 
   return (
