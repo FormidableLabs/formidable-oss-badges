@@ -1,5 +1,12 @@
 # formidable-oss-badges Changelog
 
+## 1.4.0
+
+### Minor Changes
+
+- Add simple variant for badges to display without the badge description.
+  ([#89](https://github.com/FormidableLabs/formidable-oss-badges/pull/89))
+
 ## 1.3.2
 
 ### Patch Changes
