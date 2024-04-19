@@ -12,7 +12,8 @@ const Template: ComponentStory<typeof ProjectBadge> = args => (
 
 export const ReactLiveBadge = Template.bind({})
 ReactLiveBadge.args = {
-  abbreviation: "RL",
+  abbreviation: "Re",
   description: "React Live",
   color: "skyblue",
+  simple: false,
 }

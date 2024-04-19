@@ -4,7 +4,7 @@ import reducerFn from "./reducerFn"
 import styles from "./styles.module.css"
 
 const BLACK = "#202020"
-const BASE_Y = 58
+let baseY = 58
 const includesDescender = (str: string) => RegExp(`[gjpqy]`).test(str)
 
 type Props = {
@@ -15,6 +15,7 @@ type Props = {
   className?: string
   isHoverable?: boolean
   style?: CSSProperties
+  simple?: boolean
 }
 
 const getDescription = (props: Props) => {
@@ -22,7 +23,7 @@ const getDescription = (props: Props) => {
   if (!description || !description.length) {
     return null
   }
-  const descYAxis = includesDescender(abbreviation) ? BASE_Y + 15 : BASE_Y + 11
+  const descYAxis = includesDescender(abbreviation) ? baseY + 15 : baseY + 11
   const longDesc = description && description.length > 11
   const descriptionArr = description.split(" ").reduce(reducerFn, [])
   return descriptionArr.map((word: string, idx: number) => (
@@ -50,8 +51,12 @@ const ProjectBadge = (props: Props) => {
     className,
     style,
     isHoverable = true,
+    simple = false,
   } = props
-  const abbrYAxis = includesDescender(abbreviation) ? BASE_Y : BASE_Y + 2
+  if (simple) {
+    baseY = 64
+  }
+  const abbrYAxis = includesDescender(abbreviation) ? baseY : baseY + 2
   return (
     <Fragment>
       <svg
@@ -84,16 +89,16 @@ const ProjectBadge = (props: Props) => {
             <text
               fill={BLACK}
               fontFamily="Helvetica, sans-serif"
-              fontSize={230}
+              fontSize={simple ? 280 : 230}
               letterSpacing={-5.5}
               textAnchor="middle"
-              x="50%"
+              x={simple ? "49%" : "50%"}
               y={`${abbrYAxis}%`}
             >
               {abbreviation}
             </text>
           )}
-          {getDescription(props)}
+          {!simple && getDescription(props)}
         </g>
       </svg>
     </Fragment>
