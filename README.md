@@ -76,7 +76,9 @@ See [featuredLogos](https://github.com/FormidableLabs/formidable-oss-badges/tree
 
 For a simplified version of the logo without the name in the badge (works better for smaller sizes), you can use the `simple` variant of any of the above options.
 
-<FeaturedBadge name="victorySimple">
+```jsx
+<FeaturedBadge name="victory" simple />
+```
 
 ### FeaturedBadge props
 
