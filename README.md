@@ -36,6 +36,8 @@ The `<ProjectBadge />` component takes five, optional, props:
 | abbreviation | String           | Short representation of the name. Large font. Typically one uppercase letter, one lowercase. | `"Em"`              |
 | description  | String           | Title or brief description. Smaller text, displayed in all-caps.                             | `"Enzyme Matchers"` |
 | className    | String           | Class to apply directly to the SVG                                                           | `"project-badge"`   |
+| isHoverable  | Boolean          | Add hover style effects                                                                      | `true`              |
+| simple       | Boolean          | Hides the description and enlarges the abbreviation - use for small badge display            | `false`             |
 
 It is recommended to at least include the `color`, `description`, and `abbreviation` props.
 
@@ -70,13 +72,22 @@ See [featuredLogos](https://github.com/FormidableLabs/formidable-oss-badges/tree
 - `groqd`
 - `envy`
 - `figlog`
+- `cloudsplice`
 
-### Additional props
+For a simplified version of the logo without the name in the badge (works better for smaller sizes), you can use the `simple` variant of any of the above options.
 
-| Prop        | Type    | Description              | Default |
-| ----------- | ------- | ------------------------ | ------- |
-| className   | String  | Additional class names   | `''`    |
-| isHoverable | Boolean | Add hover style effects  | `true` |
+```jsx
+<FeaturedBadge name="victory" simple />
+```
+
+### FeaturedBadge props
+
+| Prop        | Type    | Description                                                                       | Default |
+| ----------- | ------- | --------------------------------------------------------------------------------- | ------- |
+| name        | String  | One of the available badge names                                                  | `''`    |
+| className   | String  | Additional class names                                                            | `''`    |
+| isHoverable | Boolean | Add hover style effects                                                           | `true`  |
+| simple      | Boolean | Hides the description and enlarges the abbreviation - use for small badge display | `false` |
 
 ## Examples (with Images)
 

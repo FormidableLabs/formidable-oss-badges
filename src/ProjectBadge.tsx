@@ -15,6 +15,7 @@ type Props = {
   className?: string
   isHoverable?: boolean
   style?: CSSProperties
+  simple?: boolean
 }
 
 const getDescription = (props: Props) => {
@@ -50,8 +51,13 @@ const ProjectBadge = (props: Props) => {
     className,
     style,
     isHoverable = true,
+    simple = false,
   } = props
-  const abbrYAxis = includesDescender(abbreviation) ? BASE_Y : BASE_Y + 2
+  let baseY = BASE_Y
+  if (simple) {
+    baseY = 64
+  }
+  const abbrYAxis = includesDescender(abbreviation) ? baseY : baseY + 2
   return (
     <Fragment>
       <svg
@@ -84,16 +90,16 @@ const ProjectBadge = (props: Props) => {
             <text
               fill={BLACK}
               fontFamily="Helvetica, sans-serif"
-              fontSize={230}
+              fontSize={simple ? 280 : 230}
               letterSpacing={-5.5}
               textAnchor="middle"
-              x="50%"
+              x={simple ? "49%" : "50%"}
               y={`${abbrYAxis}%`}
             >
               {abbreviation}
             </text>
           )}
-          {getDescription(props)}
+          {!simple && getDescription(props)}
         </g>
       </svg>
     </Fragment>
