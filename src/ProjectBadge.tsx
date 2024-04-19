@@ -4,7 +4,7 @@ import reducerFn from "./reducerFn"
 import styles from "./styles.module.css"
 
 const BLACK = "#202020"
-let baseY = 58
+const BASE_Y = 58
 const includesDescender = (str: string) => RegExp(`[gjpqy]`).test(str)
 
 type Props = {
@@ -23,7 +23,7 @@ const getDescription = (props: Props) => {
   if (!description || !description.length) {
     return null
   }
-  const descYAxis = includesDescender(abbreviation) ? baseY + 15 : baseY + 11
+  const descYAxis = includesDescender(abbreviation) ? BASE_Y + 15 : BASE_Y + 11
   const longDesc = description && description.length > 11
   const descriptionArr = description.split(" ").reduce(reducerFn, [])
   return descriptionArr.map((word: string, idx: number) => (
@@ -53,6 +53,7 @@ const ProjectBadge = (props: Props) => {
     isHoverable = true,
     simple = false,
   } = props
+  let baseY = BASE_Y
   if (simple) {
     baseY = 64
   }
