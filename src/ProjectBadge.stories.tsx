@@ -17,3 +17,19 @@ ReactLiveBadge.args = {
   color: "skyblue",
   simple: false,
 }
+
+const BannerTemplate: ComponentStory<typeof ProjectBadge> = args => (
+  <ProjectBadge {...args} />
+)
+
+export const ReactNativeBadge = BannerTemplate.bind({})
+ReactNativeBadge.args = {
+  abbreviation: "Re",
+  description: "React Native",
+  color: "skyblue",
+  simple: true,
+  x: "40",
+  y: "160",
+  width: "200",
+  height: "200",
+}
