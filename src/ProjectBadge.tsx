@@ -1,4 +1,4 @@
-import React, { CSSProperties, Fragment } from "react"
+import React, { CSSProperties, Fragment, SVGProps } from "react"
 import clsx from "clsx"
 import reducerFn from "./reducerFn"
 import styles from "./styles.module.css"
@@ -7,7 +7,7 @@ const BLACK = "#202020"
 const BASE_Y = 58
 const includesDescender = (str: string) => RegExp(`[gjpqy]`).test(str)
 
-type Props = {
+type Props = SVGProps<SVGSVGElement> & {
   color?: string
   abbreviation: string
   description: string
@@ -52,6 +52,8 @@ const ProjectBadge = (props: Props) => {
     style,
     isHoverable = true,
     simple = false,
+    description,
+    ...rest
   } = props
   let baseY = BASE_Y
   if (simple) {
@@ -64,6 +66,7 @@ const ProjectBadge = (props: Props) => {
         viewBox="0 0 600 595"
         className={clsx(isHoverable && styles.hoverableLogo, className)}
         style={style}
+        {...rest}
       >
         <g fill="none" fillRule="evenodd">
           <path
