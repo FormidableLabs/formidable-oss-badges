@@ -1,5 +1,14 @@
 # formidable-oss-badges Changelog
 
+## 1.4.1
+
+### Patch Changes
+
+- Enable ProjectBadge to accept additional props for use in OSS Banner -
+  matching
+  ([#91](https://github.com/FormidableLabs/formidable-oss-badges/pull/91))
+  FeaturedBadge"
+
 ## 1.4.0
 
 ### Minor Changes
