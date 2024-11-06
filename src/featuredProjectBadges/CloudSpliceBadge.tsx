@@ -1,7 +1,7 @@
 import clsx from "clsx"
 import { CSSProperties, SVGProps } from "react"
-import Cloudsplice from "../assets/featuredLogos/cloudsplice.svg"
-import CloudspliceSimple from "../assets/featuredLogos/cloudsplice-simple.svg"
+import CloudSplice from "../assets/featuredLogos/cloudsplice.svg"
+import CloudSpliceSimple from "../assets/featuredLogos/cloudsplice-simple.svg"
 import styles from "../styles.module.css"
 
 type Props = SVGProps<SVGElement> & {
@@ -11,14 +11,14 @@ type Props = SVGProps<SVGElement> & {
   simple?: boolean
 }
 
-export const CloudspliceBadge = ({
+export const CloudSpliceBadge = ({
   className,
   style,
   isHoverable = true,
   simple = false,
   ...rest
 }: Props) => {
-  const Logo = simple ? CloudspliceSimple : Cloudsplice
+  const Logo = simple ? CloudSpliceSimple : CloudSplice
 
   return (
     <Logo

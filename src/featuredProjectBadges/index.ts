@@ -1,6 +1,6 @@
-export { CloudspliceBadge } from "./CloudspliceBadge"
+export { CloudSpliceBadge } from "./CloudSpliceBadge"
 export { EnvyBadge } from "./EnvyBadge"
-export { FiglogBadge } from "./FiglogBadge"
+export { FigLogBadge } from "./FigLogBadge"
 export { GroqdBadge } from "./GroqdBadge"
 export { NukaBadge } from "./NukaBadge"
 export { OwlBadge } from "./OwlBadge"

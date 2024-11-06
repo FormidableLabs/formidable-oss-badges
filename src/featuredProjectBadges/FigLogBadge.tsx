@@ -1,7 +1,7 @@
 import clsx from "clsx"
 import { CSSProperties, SVGProps } from "react"
-import Figlog from "../assets/featuredLogos/figlog.svg"
-import FiglogSimple from "../assets/featuredLogos/figlog-simple.svg"
+import FigLog from "../assets/featuredLogos/figlog.svg"
+import FigLogSimple from "../assets/featuredLogos/figlog-simple.svg"
 import styles from "../styles.module.css"
 
 type Props = SVGProps<SVGElement> & {
@@ -11,14 +11,14 @@ type Props = SVGProps<SVGElement> & {
   simple?: boolean
 }
 
-export const FiglogBadge = ({
+export const FigLogBadge = ({
   className,
   style,
   isHoverable = true,
   simple = false,
   ...rest
 }: Props) => {
-  const Logo = simple ? FiglogSimple : Figlog
+  const Logo = simple ? FigLogSimple : FigLog
 
   return (
     <Logo
