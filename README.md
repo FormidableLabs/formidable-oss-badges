@@ -20,8 +20,10 @@ Badges for Formidable Open Source Projects
 ## Using the package
 
 - `yarn add formidable-oss-badges` or `npm install formidable-oss-badges`
-- In your react app, `import { FeaturedBadge, ProjectBadge } from "formidable-oss-badges";`
-- To get hover styles using CSS modules `import "formidable-oss-badges/dist/style.css";`
+- In your react app,
+  `import { FeaturedBadge, ProjectBadge } from "formidable-oss-badges";`
+- To get hover styles using CSS modules
+  `import "formidable-oss-badges/dist/style.css";`
 - Use the `<ProjectBadge />` or `<FeaturedBadge />` component as directed below
 
 ## ProjectBadge
@@ -39,11 +41,13 @@ The `<ProjectBadge />` component takes five, optional, props:
 | isHoverable  | Boolean          | Add hover style effects                                                                      | `true`              |
 | simple       | Boolean          | Hides the description and enlarges the abbreviation - use for small badge display            | `false`             |
 
-It is recommended to at least include the `color`, `description`, and `abbreviation` props.
+It is recommended to at least include the `color`, `description`, and
+`abbreviation` props.
 
 ### ProjectBadge children
 
-Will accept any svg child (we recommend to use an `<image/>` with an embedded png, svg or lossless image format of your choice. See example 5).
+Will accept any svg child (we recommend to use an `<image/>` with an embedded
+png, svg or lossless image format of your choice. See example 5).
 
 Presence of a child will cause the component to ignore any `abbreviation` prop.
 
@@ -57,11 +61,14 @@ e.g:
 
 ## FeaturedBadge
 
-To use a Featured Formidable Badge, you only need to pass in a single prop, `name`, that matches one of the available badges listed below.
+To use a Featured Formidable Badge, you only need to pass in a single prop,
+`name`, that matches one of the available badges listed below.
 
 ### Available Badges
 
-See [featuredLogos](https://github.com/FormidableLabs/formidable-oss-badges/tree/master/src/assets/featuredLogos) for the latest available lineup.
+See
+[featuredLogos](https://github.com/FormidableLabs/formidable-oss-badges/tree/master/src/assets/featuredLogos)
+for the latest available lineup.
 
 - `renature`
 - `spectacle`
@@ -74,7 +81,9 @@ See [featuredLogos](https://github.com/FormidableLabs/formidable-oss-badges/tree
 - `figlog`
 - `cloudsplice`
 
-For a simplified version of the logo without the name in the badge (works better for smaller sizes), you can use the `simple` variant of any of the above options.
+For a simplified version of the logo without the name in the badge (works better
+for smaller sizes), you can use the `simple` variant of any of the above
+options.
 
 ```jsx
 <FeaturedBadge name="victory" simple />
@@ -85,6 +94,35 @@ For a simplified version of the logo without the name in the badge (works better
 | Prop        | Type    | Description                                                                       | Default |
 | ----------- | ------- | --------------------------------------------------------------------------------- | ------- |
 | name        | String  | One of the available badge names                                                  | `''`    |
+| className   | String  | Additional class names                                                            | `''`    |
+| isHoverable | Boolean | Add hover style effects                                                           | `true`  |
+| simple      | Boolean | Hides the description and enlarges the abbreviation - use for small badge display | `false` |
+
+## Featured Project Badges
+
+Named exports of featured project badges for importing a single badge.
+
+### Available Badges
+
+See
+[featuredProjectBadges](https://github.com/FormidableLabs/formidable-oss-badges/tree/master/src/featuredProjectBadges)
+for the latest available lineup.
+
+- `Renature`
+- `Spectacle`
+- `Urql`
+- `Victory`
+- `Nuka`
+- `Owl`
+- `Groqd`
+- `Envy`
+- `FigLog`
+- `CloudSplice`
+
+### FeaturedBadge props
+
+| Prop        | Type    | Description                                                                       | Default |
+| ----------- | ------- | --------------------------------------------------------------------------------- | ------- |
 | className   | String  | Additional class names                                                            | `''`    |
 | isHoverable | Boolean | Add hover style effects                                                           | `true`  |
 | simple      | Boolean | Hides the description and enlarges the abbreviation - use for small badge display | `false` |
@@ -155,6 +193,9 @@ To try out the badge components locally:
 
 ## Maintenance Status
 
-**Active:** Formidable is actively working on this project, and we expect to continue for work for the foreseeable future. Bug reports, feature requests and pull requests are welcome.
+**Active:** Formidable is actively working on this project, and we expect to
+continue for work for the foreseeable future. Bug reports, feature requests and
+pull requests are welcome.
 
-[maintenance-image]: https://img.shields.io/badge/maintenance-active-green.svg?color=brightgreen&style=flat
+[maintenance-image]:
+  https://img.shields.io/badge/maintenance-active-green.svg?color=brightgreen&style=flat
