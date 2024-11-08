@@ -1,5 +1,12 @@
 # formidable-oss-badges Changelog
 
+## 1.5.0
+
+### Minor Changes
+
+- Add featured project badge exports for improved tree shaking
+  ([#93](https://github.com/FormidableLabs/formidable-oss-badges/pull/93))
+
 ## 1.4.1
 
 ### Patch Changes
