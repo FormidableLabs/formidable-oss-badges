@@ -1,5 +1,12 @@
 # formidable-oss-badges Changelog
 
+## 1.5.1
+
+### Patch Changes
+
+- Add sideEffects false to package and update featuredProjectBadge docs
+  ([#95](https://github.com/FormidableLabs/formidable-oss-badges/pull/95))
+
 ## 1.5.0
 
 ### Minor Changes
