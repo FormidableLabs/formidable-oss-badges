@@ -108,16 +108,16 @@ See
 [featuredProjectBadges](https://github.com/FormidableLabs/formidable-oss-badges/tree/master/src/featuredProjectBadges)
 for the latest available lineup.
 
-- `Renature`
-- `Spectacle`
-- `Urql`
-- `Victory`
-- `Nuka`
-- `Owl`
-- `Groqd`
-- `Envy`
-- `FigLog`
-- `CloudSplice`
+- `RenatureBadge`
+- `SpectacleBadge`
+- `UrqlBadge`
+- `VictoryBadge`
+- `NukaBadge`
+- `OwlBadge`
+- `GroqdBadge`
+- `EnvyBadge`
+- `FigLogBadge`
+- `CloudSpliceBadge`
 
 ### FeaturedBadge props
 
