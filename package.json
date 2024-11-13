@@ -7,6 +7,7 @@
   "main": "dist/formidable-oss-badges.cjs.js",
   "jsnext:main": "dist/formidable-oss-badges.es.js",
   "module": "dist/formidable-oss-badges.es.js",
+  "sideEffects": false,
   "peerDependencies": {
     "react": ">= 18.0.0",
     "react-dom": ">= 18.0.0"
