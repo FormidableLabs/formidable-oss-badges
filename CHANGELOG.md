@@ -1,5 +1,13 @@
 # formidable-oss-badges Changelog
 
+## 1.6.0
+
+### Minor Changes
+
+- Remove featuredBadgeNames string array and replace with a type for narrowing
+  ([#97](https://github.com/FormidableLabs/formidable-oss-badges/pull/97))
+  purposes
+
 ## 1.5.1
 
 ### Patch Changes
