@@ -5,3 +5,4 @@ export { default as FeaturedBadge } from "./FeaturedBadge"
 export * from "./featuredProjectBadges"
 
 export const featuredBadgeNames = Object.keys(featuredLogos.default)
+export type FeaturedBadgeNames = keyof typeof featuredLogos.default
