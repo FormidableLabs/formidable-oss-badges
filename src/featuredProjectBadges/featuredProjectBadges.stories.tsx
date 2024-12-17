@@ -1,5 +1,6 @@
 import { ComponentStory } from "@storybook/react"
 import {
+  AMABadge,
   CloudSpliceBadge,
   EnvyBadge,
   FigLogBadge,
@@ -15,6 +16,11 @@ import {
 export default {
   title: "FeaturedProjectBadges",
 }
+
+export const AMA: ComponentStory<typeof AMABadge> = args => (
+  <AMABadge style={{ width: 250 }} {...args} />
+)
+AMA.args = { isHoverable: true, simple: false }
 
 export const CloudSplice: ComponentStory<typeof CloudSpliceBadge> = args => (
   <CloudSpliceBadge style={{ width: 250 }} {...args} />
