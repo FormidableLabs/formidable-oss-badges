@@ -1,3 +1,4 @@
+export { AMABadge } from "./AMABadge"
 export { CloudSpliceBadge } from "./CloudSpliceBadge"
 export { EnvyBadge } from "./EnvyBadge"
 export { FigLogBadge } from "./FigLogBadge"
