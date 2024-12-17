@@ -18,6 +18,8 @@ import figlog from "./figlog.svg"
 import figlogSimple from "./figlog-simple.svg"
 import cloudsplice from "./cloudsplice.svg"
 import cloudspliceSimple from "./cloudsplice-simple.svg"
+import ama from "./ama.svg"
+import amaSimple from "./ama-simple.svg"
 
 export default {
   renature,
@@ -40,4 +42,6 @@ export default {
   figlogSimple,
   cloudsplice,
   cloudspliceSimple,
+  ama,
+  amaSimple,
 }
