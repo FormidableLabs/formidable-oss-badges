@@ -22,6 +22,9 @@ Nuka.args = { name: "nuka", simple: false }
 export const ReactNativeOwl = Template.bind({})
 ReactNativeOwl.args = { name: "owl", simple: false }
 
+export const ReactNativeAMA = Template.bind({})
+ReactNativeAMA.args = { name: "ama", simple: false }
+
 export const Victory = Template.bind({})
 Victory.args = { name: "victory", simple: false }
 
