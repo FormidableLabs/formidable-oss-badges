@@ -1,5 +1,12 @@
 # formidable-oss-badges Changelog
 
+## 1.7.0
+
+### Minor Changes
+
+- Add AMA
+  ([#100](https://github.com/FormidableLabs/formidable-oss-badges/pull/100))
+
 ## 1.6.0
 
 ### Minor Changes
