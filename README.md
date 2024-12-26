@@ -119,13 +119,17 @@ for the latest available lineup.
 - `FigLogBadge`
 - `CloudSpliceBadge`
 
-### FeaturedBadge props
+### Featured Project Badge props
 
 | Prop        | Type    | Description                                                                       | Default |
 | ----------- | ------- | --------------------------------------------------------------------------------- | ------- |
 | className   | String  | Additional class names                                                            | `''`    |
 | isHoverable | Boolean | Add hover style effects                                                           | `true`  |
 | simple      | Boolean | Hides the description and enlarges the abbreviation - use for small badge display | `false` |
+
+## Featured Logos SVGs
+
+All featured logos are available as SVGs and can be imported as `featuredLogos`
 
 ## Examples (with Images)
 
