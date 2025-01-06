@@ -4,7 +4,7 @@ import * as featuredLogos from "./assets/featuredLogos"
 import styles from "./styles.module.css"
 
 type Props = SVGProps<SVGElement> & {
-  name: keyof typeof featuredLogos.default
+  name: Exclude<keyof typeof featuredLogos.default, `${string}Simple`>
   className?: string
   isHoverable?: boolean
   style?: CSSProperties
