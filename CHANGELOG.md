@@ -1,5 +1,12 @@
 # formidable-oss-badges Changelog
 
+## 1.7.1
+
+### Patch Changes
+
+- Fixes name prop type on FeaturedBage component
+  ([#102](https://github.com/FormidableLabs/formidable-oss-badges/pull/102))
+
 ## 1.7.0
 
 ### Minor Changes

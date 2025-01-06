@@ -1,6 +1,6 @@
 {
   "name": "formidable-oss-badges",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "Badges for Formidable OSS",
   "license": "MIT",
   "types": "dist/src/index.d.ts",
