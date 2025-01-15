@@ -3,8 +3,11 @@ import { CSSProperties, SVGProps } from "react"
 import * as featuredLogos from "./assets/featuredLogos"
 import styles from "./styles.module.css"
 
+type FeaturedLogoName = keyof typeof featuredLogos.default
+export type FeaturedBadgeName = Exclude<FeaturedLogoName, `${string}Simple`>
+
 type Props = SVGProps<SVGElement> & {
-  name: Exclude<keyof typeof featuredLogos.default, `${string}Simple`>
+  name: FeaturedBadgeName
   className?: string
   isHoverable?: boolean
   style?: CSSProperties
