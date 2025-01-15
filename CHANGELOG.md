@@ -1,5 +1,14 @@
 # formidable-oss-badges Changelog
 
+## 1.7.2
+
+### Patch Changes
+
+- - Fixed exported type `FeaturedBadgeNames` to exclude Simple names
+    ([#104](https://github.com/FormidableLabs/formidable-oss-badges/pull/104))
+  - Updated type name from `FeaturedBadgeNames` to singular `FeaturedBadgeName`
+    (type is union not an array)
+
 ## 1.7.1
 
 ### Patch Changes
