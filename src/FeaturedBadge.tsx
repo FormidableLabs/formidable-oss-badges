@@ -22,9 +22,9 @@ const FeaturedBadge = ({
   simple = false,
   ...rest
 }: Props) => {
-  const keyName = simple ? `${name.toLowerCase()}Simple` : name.toLowerCase()
-  const Logo =
-    featuredLogos.default[keyName as keyof typeof featuredLogos.default]
+  const simpleName = `${name}Simple` as const
+  const keyName = simple ? simpleName : name
+  const Logo = featuredLogos.default[keyName]
   if (!Logo) return null
 
   return (
